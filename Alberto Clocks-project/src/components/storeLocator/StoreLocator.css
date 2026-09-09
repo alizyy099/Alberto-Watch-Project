@@ -1,7 +1,3 @@
-/* =========================================
-   STORE LOCATOR
-========================================= */
-
 .store-section {
   position: relative;
   min-height: 100vh;
@@ -10,11 +6,6 @@
   background: #080d18;
   color: #f8fafc;
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
 
 .store-header {
   max-width: 850px;
@@ -44,7 +35,6 @@
     #60a5fa,
     #bae6fd
   );
-
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,60 +48,31 @@
   color: rgba(248, 250, 252, 0.62);
 }
 
-
-/* =========================================
-   MAIN CONTAINER
-========================================= */
-
 .store-container {
   max-width: 1250px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-
   gap: 60px;
   align-items: center;
 }
 
-
-/* =========================================
-   REAL MAP
-========================================= */
-
 .store-map {
   position: relative;
-
   height: 500px;
-
   overflow: hidden;
-
   border-radius: 20px;
-
   border: 1px solid rgba(125, 211, 252, 0.18);
-
   background: #0d1525;
-
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
 }
-
-
-/* Leaflet map */
 
 .store-map .leaflet-container {
   width: 100%;
   height: 100%;
-
   border-radius: 20px;
-
   z-index: 1;
 }
-
-
-/* =========================================
-   STORE INFORMATION
-========================================= */
 
 .store-info {
   max-width: 480px;
@@ -119,197 +80,120 @@
 
 .store-number {
   margin: 0 0 15px;
-
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: 3px;
-
   color: #7dd3fc;
 }
 
 .store-info h3 {
   margin: 0 0 12px;
-
   font-size: 38px;
-
   line-height: 1.2;
-
   font-weight: 800;
 }
 
 .store-address {
   margin: 0 0 35px;
-
   font-size: 16px;
-
   color: rgba(248, 250, 252, 0.55);
 }
 
-
-/* =========================================
-   STORE DETAILS
-========================================= */
-
 .store-details {
   display: flex;
-
   flex-direction: column;
-
   gap: 20px;
-
   margin-bottom: 30px;
 }
 
 .store-details div {
   display: flex;
-
   align-items: center;
-
   gap: 16px;
 }
 
 .store-details i {
   font-size: 20px;
-
   color: #7dd3fc;
 }
 
 .store-details span {
   font-size: 14px;
-
   line-height: 1.6;
-
   color: rgba(248, 250, 252, 0.65);
 }
 
-
-/* =========================================
-   DISTANCE
-========================================= */
-
 .distance-box {
   display: flex;
-
   align-items: center;
-
   gap: 16px;
-
   width: fit-content;
-
   margin-bottom: 28px;
-
   padding: 16px 20px;
-
   border-radius: 10px;
-
   border: 1px solid rgba(125, 211, 252, 0.18);
-
   background: rgba(125, 211, 252, 0.05);
 }
 
 .distance-box > i {
   font-size: 22px;
-
   color: #7dd3fc;
 }
 
 .distance-box div {
   display: flex;
-
   flex-direction: column;
-
   gap: 4px;
 }
 
 .distance-box small {
   font-size: 10px;
-
   letter-spacing: 1px;
-
   color: rgba(248, 250, 252, 0.45);
 }
 
 .distance-box strong {
   font-size: 18px;
-
   color: #f8fafc;
 }
 
-
-/* =========================================
-   ERROR MESSAGE
-========================================= */
-
 .location-error {
   margin: 0 0 20px;
-
   font-size: 13px;
-
   line-height: 1.6;
-
   color: #fca5a5;
 }
 
-
-/* =========================================
-   LOCATION BUTTON
-========================================= */
-
 .location-btn {
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   padding: 14px 22px;
-
   border: 1px solid rgba(125, 211, 252, 0.4);
-
   border-radius: 7px;
-
   background: transparent;
-
   color: #7dd3fc;
-
   font-size: 12px;
-
   font-weight: 700;
-
   letter-spacing: 1px;
-
   cursor: pointer;
-
   transition: all 0.3s ease;
 }
 
 .location-btn:hover {
   background: #7dd3fc;
-
   color: #080d18;
-
   transform: translateY(-3px);
-
-  box-shadow:
-    0 12px 30px rgba(125, 211, 252, 0.18);
+  box-shadow: 0 12px 30px rgba(125, 211, 252, 0.18);
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 992px) {
-
   .store-section {
     padding: 110px 6% 90px;
   }
 
   .store-container {
     grid-template-columns: 1fr;
-
     gap: 50px;
   }
 
@@ -322,13 +206,7 @@
   }
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 576px) {
-
   .store-section {
     padding: 90px 6% 75px;
   }
@@ -361,7 +239,6 @@
 
   .location-btn {
     width: 100%;
-
     justify-content: center;
   }
 }

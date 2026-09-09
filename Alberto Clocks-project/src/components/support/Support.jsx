@@ -2,11 +2,9 @@ import { useState } from 'react'
 import './Support.css'
 
 function Support() {
-
   const [issue, setIssue] = useState('')
 
   const getMessagePlaceholder = () => {
-
     if (issue === 'Get Help') {
       return 'Write your message...'
     }
@@ -30,25 +28,14 @@ function Support() {
     return 'Select an issue first...'
   }
 
-
   const handleSubmit = (event) => {
     event.preventDefault()
-
     alert('Your request has been submitted successfully!')
   }
 
-
   return (
-
-    <section
-      className="support-section"
-      id="support"
-    >
-
-      {/* Header */}
-
+    <section className="support-section" id="support">
       <div className="support-header">
-
         <p className="support-subtitle">
           SUPPORT CENTER
         </p>
@@ -62,90 +49,54 @@ function Support() {
           Have a question, concern, or feedback?
           Our support team is here to assist you.
         </p>
-
       </div>
 
-
-      {/* Support Card */}
-
       <div className="support-card">
-
-        {/* Card Heading */}
-
         <div className="support-card-header">
-
           <div className="support-icon">
             <i className="bi bi-headset"></i>
           </div>
 
           <div>
-
-            <p>
-              ALBERTO SUPPORT
-            </p>
-
-            <h3>
-              Get in Touch
-            </h3>
-
+            <p>ALBERTO SUPPORT</p>
+            <h3>Get in Touch</h3>
           </div>
-
         </div>
 
-
-        {/* Contact Information */}
-
         <div className="support-contact">
-
           <div className="contact-item">
-
             <i className="bi bi-envelope"></i>
 
             <div>
               <small>Email</small>
               <span>support@albertoclocks.com</span>
             </div>
-
           </div>
 
-
           <div className="contact-item">
-
             <i className="bi bi-telephone"></i>
 
             <div>
               <small>Contact</small>
               <span>+92 21 3456 7890</span>
             </div>
-
           </div>
 
-
           <div className="contact-item">
-
             <i className="bi bi-geo-alt"></i>
 
             <div>
               <small>Address</small>
               <span>Karachi, Pakistan</span>
             </div>
-
           </div>
-
         </div>
-
-
-        {/* Form */}
 
         <form
           className="support-form"
           onSubmit={handleSubmit}
         >
-
-          {/* Name */}
-
           <div className="form-group">
-
             <label htmlFor="name">
               Your Name
             </label>
@@ -156,14 +107,9 @@ function Support() {
               placeholder="Enter your name"
               required
             />
-
           </div>
 
-
-          {/* Email */}
-
           <div className="form-group">
-
             <label htmlFor="email">
               Email Address
             </label>
@@ -174,14 +120,9 @@ function Support() {
               placeholder="Enter your email"
               required
             />
-
           </div>
 
-
-          {/* Address */}
-
           <div className="form-group">
-
             <label htmlFor="address">
               Address
             </label>
@@ -191,14 +132,9 @@ function Support() {
               type="text"
               placeholder="Enter your address"
             />
-
           </div>
 
-
-          {/* Issue */}
-
           <div className="form-group">
-
             <label htmlFor="issue">
               Select Issue
             </label>
@@ -206,12 +142,9 @@ function Support() {
             <select
               id="issue"
               value={issue}
-              onChange={(event) =>
-                setIssue(event.target.value)
-              }
+              onChange={(event) => setIssue(event.target.value)}
               required
             >
-
               <option value="">
                 Choose an option
               </option>
@@ -235,16 +168,10 @@ function Support() {
               <option value="General Question">
                 General Question
               </option>
-
             </select>
-
           </div>
 
-
-          {/* Message */}
-
           <div className="form-group message-group">
-
             <label htmlFor="message">
               Your Message
             </label>
@@ -255,29 +182,18 @@ function Support() {
               placeholder={getMessagePlaceholder()}
               required
             ></textarea>
-
           </div>
-
-
-          {/* Submit */}
 
           <button
             type="submit"
             className="support-submit"
           >
-
             <i className="bi bi-send"></i>
-
             Submit Request
-
           </button>
-
         </form>
-
       </div>
-
     </section>
-
   )
 }
 

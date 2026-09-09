@@ -1,15 +1,19 @@
-import gallery from '../../assets/data/gallery.json'
+import galleryData from '../../assets/data/gallery.json'
 import './Gallery.css'
 
 function Gallery() {
-  const featured = gallery.filter((item) => !item.comingSoon)
-  const comingSoon = gallery.filter((item) => item.comingSoon)
+  const featured = galleryData.filter((item) => !item.comingSoon)
+  const comingSoon = galleryData.filter((item) => item.comingSoon)
 
   return (
     <section className="gallery-section" id="gallery">
       <div className="gallery-header">
         <p className="gallery-subtitle">THE COLLECTION</p>
-        <h2>A Closer Look at <span>Alberto</span></h2>
+
+        <h2>
+          A Closer Look at <span>Alberto</span>
+        </h2>
+
         <p className="gallery-intro">
           A visual selection of signature timepieces and designs coming next.
         </p>
@@ -21,8 +25,10 @@ function Gallery() {
             <p className="gallery-label">FEATURED</p>
             <h3>Signature Timepieces</h3>
           </div>
+
           <p className="gallery-block-description">
-            Selected designs that represent the refined character of the Alberto collection.
+            Selected designs that represent the refined character of the Alberto
+            collection.
           </p>
         </div>
 
@@ -31,6 +37,7 @@ function Gallery() {
             <article className="gallery-card" key={item.name}>
               <div className="gallery-image">
                 <img src={item.image} alt={item.name} />
+
                 <div className="gallery-overlay">
                   <span>{item.category}</span>
                   <h4>{item.name}</h4>
@@ -48,8 +55,10 @@ function Gallery() {
             <p className="gallery-label">COMING SOON</p>
             <h3>The Future of Alberto</h3>
           </div>
+
           <p className="gallery-block-description">
-            Three upcoming concepts prepared for the next chapter of the collection.
+            Three upcoming concepts prepared for the next chapter of the
+            collection.
           </p>
         </div>
 
@@ -58,6 +67,7 @@ function Gallery() {
             <article className="coming-soon-card" key={item.name}>
               <div className="coming-soon-image">
                 <img src={item.image} alt={item.name} />
+
                 <div className="coming-soon-overlay">
                   <span className="coming-soon-badge">COMING SOON</span>
                   <h4>{item.name}</h4>

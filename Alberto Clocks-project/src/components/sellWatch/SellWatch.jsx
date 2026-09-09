@@ -15,10 +15,6 @@ function SellWatch() {
   return (
     <section className="sell-watch-section" id="sell-watch">
 
-      {/* =========================
-          HEADER
-      ========================= */}
-
       <div className="sell-watch-header">
 
         <p className="sell-watch-subtitle">
@@ -38,11 +34,6 @@ function SellWatch() {
 
       </div>
 
-
-      {/* =========================
-          MAIN CARD
-      ========================= */}
-
       <div className="sell-watch-card">
 
         <div className="sell-watch-card-header">
@@ -61,15 +52,10 @@ function SellWatch() {
 
         </div>
 
-
         <form
           className="sell-watch-form"
           onSubmit={handleSubmit}
         >
-
-          {/* =========================
-              IMAGE UPLOAD
-          ========================= */}
 
           <div className="watch-upload">
 
@@ -107,18 +93,12 @@ function SellWatch() {
 
           </div>
 
-
-          {/* =========================
-              WATCH INFORMATION
-          ========================= */}
-
           <div className="form-section">
 
             <div className="form-section-title">
               <span>01</span>
               <h4>Watch Information</h4>
             </div>
-
 
             <div className="form-row">
 
@@ -136,7 +116,6 @@ function SellWatch() {
                 />
 
               </div>
-
 
               <div className="form-group">
 
@@ -227,9 +206,6 @@ function SellWatch() {
 
             </div>
 
-
-            {/* CUSTOM BRAND */}
-
             {brand === 'Others' && (
               <div className="form-group custom-brand">
 
@@ -247,7 +223,6 @@ function SellWatch() {
               </div>
             )}
 
-
             <div className="form-row">
 
               <div className="form-group">
@@ -264,7 +239,6 @@ function SellWatch() {
                 />
 
               </div>
-
 
               <div className="form-group">
 
@@ -309,18 +283,12 @@ function SellWatch() {
 
           </div>
 
-
-          {/* =========================
-              CONDITION & ISSUES
-          ========================= */}
-
           <div className="form-section">
 
             <div className="form-section-title">
               <span>02</span>
               <h4>Condition & Details</h4>
             </div>
-
 
             <div className="form-group">
 
@@ -335,7 +303,6 @@ function SellWatch() {
               ></textarea>
 
             </div>
-
 
             <div className="form-group">
 
@@ -353,18 +320,12 @@ function SellWatch() {
 
           </div>
 
-
-          {/* =========================
-              PERSONAL INFORMATION
-          ========================= */}
-
           <div className="form-section">
 
             <div className="form-section-title">
               <span>03</span>
               <h4>Your Information</h4>
             </div>
-
 
             <div className="form-row">
 
@@ -382,7 +343,6 @@ function SellWatch() {
                 />
 
               </div>
-
 
               <div className="form-group">
 
@@ -402,11 +362,6 @@ function SellWatch() {
             </div>
 
           </div>
-
-
-          {/* =========================
-              SUBMIT
-          ========================= */}
 
           <div className="sell-watch-submit">
 

@@ -1,147 +1,87 @@
-/* =========================================
-   ALBERTO NAVBAR
-   ========================================= */
-
 .alberto-navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-
+  inset: 0 0 auto;
   width: 100%;
   height: 82px;
-
-  z-index: 9999;
-
+  z-index: 900;
   border-bottom: 1px solid rgba(159, 220, 246, 0.13);
-
   background: rgba(5, 8, 16, 0.94);
-
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
-
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
 }
-
-
-/* Premium line underneath navbar */
 
 .alberto-navbar::after {
   content: "";
-
   position: absolute;
-
   left: 8%;
   right: 8%;
   bottom: -1px;
-
   height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #9fdcf6 42%,
-      #d9bd72 62%,
-      transparent
-    );
-
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #9fdcf6 42%,
+    #d9bd72 62%,
+    transparent
+  );
   opacity: 0.6;
-
   pointer-events: none;
 }
 
-
-/* =========================================
-   NAVBAR INNER
-   ========================================= */
-
 .navbar-inner {
   width: min(1500px, 94%);
-
   height: 100%;
-
   margin: 0 auto;
-
   display: flex;
   align-items: center;
-
   gap: 22px;
 }
 
-
-/* =========================================
-   LOGO
-   ========================================= */
-
 .alberto-logo {
-  flex-shrink: 0;
-
   display: flex;
   align-items: center;
-
   gap: 10px;
-
+  flex-shrink: 0;
   color: #ffffff;
-
   text-decoration: none;
+  pointer-events: auto;
 }
 
 .alberto-logo img {
   width: 48px;
   height: 48px;
-
-  object-fit: contain;
-
   display: block;
+  object-fit: contain;
 }
 
 .alberto-logo > span {
   display: flex;
   flex-direction: column;
-
   font-size: 17px;
-
   line-height: 1;
-
   font-weight: 900;
-
   letter-spacing: 1.8px;
-
   white-space: nowrap;
 }
 
 .alberto-logo small {
   margin-top: 5px;
-
   color: #d9bd72;
-
   font-size: 7px;
-
   font-weight: 800;
-
   letter-spacing: 3px;
-
   text-transform: uppercase;
 }
 
-
-/* =========================================
-   DESKTOP NAVIGATION
-   ========================================= */
-
 .navbar-links {
-  flex: 1;
-
-  margin: 0;
-  padding: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex: 1;
   gap: 1px;
-
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -152,60 +92,33 @@
 
 .navbar-links a {
   position: relative;
-
   display: block;
-
   padding: 11px 9px;
-
   color: rgba(248, 250, 252, 0.58);
-
   text-decoration: none;
-
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 0.6px;
-
   white-space: nowrap;
-
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .navbar-links a:hover {
   color: #ffffff;
-
   transform: translateY(-1px);
 }
 
-
-/* Animated underline */
-
 .navbar-links a::after {
   content: "";
-
   position: absolute;
-
   left: 9px;
   right: 9px;
-
   bottom: 4px;
-
+  width: auto;
   height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #9fdcf6,
-      #d9bd72
-    );
-
+  background: linear-gradient(90deg, #9fdcf6, #d9bd72);
   transform: scaleX(0);
-
   transform-origin: center;
-
   transition: transform 0.3s ease;
 }
 
@@ -213,34 +126,20 @@
   transform: scaleX(1);
 }
 
-
-/* =========================================
-   RIGHT NAVIGATION ACTIONS
-   ========================================= */
-
 .navbar-actions {
   display: flex;
-
   align-items: center;
-
   gap: 14px;
-
   flex-shrink: 0;
 }
 
 .sell-nav-link {
   color: rgba(248, 250, 252, 0.58);
-
   text-decoration: none;
-
   font-size: 9px;
-
   font-weight: 800;
-
   letter-spacing: 0.8px;
-
   white-space: nowrap;
-
   transition: color 0.25s ease;
 }
 
@@ -248,89 +147,54 @@
   color: #d9bd72;
 }
 
-
-/* =========================================
-   SHOP NOW BUTTON
-   ========================================= */
-
 .shop-now-btn {
   position: relative;
-
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 9px;
-
   min-height: 42px;
-
   padding: 12px 18px;
-
   border: 1px solid rgba(159, 220, 246, 0.35);
-
   border-radius: 8px;
-
-  background:
-    linear-gradient(
-      110deg,
-      #173b82 0%,
-      #126b96 48%,
-      #5c8fa5 78%,
-      #d0aa58 125%
-    );
-
+  background: linear-gradient(
+    110deg,
+    #173b82 0%,
+    #126b96 48%,
+    #5c8fa5 78%,
+    #d0aa58 125%
+  );
   color: #ffffff;
-
   text-decoration: none;
-
   font-size: 8px;
-
   font-weight: 900;
-
   letter-spacing: 1px;
-
   white-space: nowrap;
-
   overflow: hidden;
-
   box-shadow:
     0 10px 28px rgba(13, 96, 146, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.16);
-
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
     filter 0.3s ease;
 }
 
-
-/* Soft light moving across button */
-
 .shop-now-btn::before {
   content: "";
-
   position: absolute;
-
   top: 0;
   bottom: 0;
-
   left: -70%;
-
   width: 45%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.18),
-      transparent
-    );
-
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
   transform: skewX(-20deg);
-
   transition: left 0.6s ease;
-
   pointer-events: none;
 }
 
@@ -340,50 +204,20 @@
 
 .shop-now-btn:hover {
   color: #ffffff;
-
   transform: translateY(-2px);
-
   filter: brightness(1.08);
-
   box-shadow:
     0 15px 35px rgba(13, 96, 146, 0.3),
     0 0 25px rgba(217, 189, 114, 0.08);
 }
 
-
-/* =========================================
-   MOBILE SHOP BUTTON
-   ========================================= */
-
-.shop-mobile {
-  display: none;
-}
-
-
-/* =========================================
-   MOBILE MENU BUTTON
-   ========================================= */
-
-.navbar-toggle {
-  display: none;
-}
-
-
-/* =========================================
-   MOBILE OVERLAY
-   ========================================= */
-
+.shop-mobile,
+.navbar-toggle,
 .navbar-overlay {
   display: none;
 }
 
-
-/* =========================================
-   LARGE TABLET / SMALL DESKTOP
-   ========================================= */
-
 @media (max-width: 1250px) {
-
   .navbar-inner {
     gap: 12px;
   }
@@ -391,7 +225,6 @@
   .navbar-links a {
     padding-left: 6px;
     padding-right: 6px;
-
     font-size: 8px;
   }
 
@@ -404,128 +237,115 @@
   }
 }
 
-
-/* =========================================
-   TABLET
-   ========================================= */
-
 @media (max-width: 1050px) {
-
   .alberto-navbar {
-    height: 74px;
+    height: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    pointer-events: none;
+  }
+
+  .alberto-navbar::after {
+    display: none;
   }
 
   .navbar-inner {
-    width: 92%;
-
-    min-height: 74px;
-
-    gap: 0;
+    position: relative;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    pointer-events: none;
   }
 
+  .alberto-logo {
+    position: fixed;
+    top: 14px;
+    left: 16px;
+    gap: 8px;
+    z-index: 950;
+    pointer-events: auto;
+  }
 
-  /* Hide desktop actions */
+  .alberto-logo img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .alberto-logo > span {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .alberto-logo small {
+    margin-top: 4px;
+    font-size: 6px;
+    letter-spacing: 2.5px;
+  }
 
   .navbar-actions {
     display: none;
   }
 
-
-  /* Hamburger */
-
   .navbar-toggle {
+    position: fixed;
+    top: 14px;
+    right: 16px;
     width: 44px;
     height: 44px;
-
-    margin-left: auto;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    border: 1px solid rgba(159, 220, 246, 0.18);
-
-    border-radius: 10px;
-
-    background:
-      linear-gradient(
-        145deg,
-        #111e33,
-        #0a1324
-      );
-
+    border: 0;
+    border-radius: 8px;
+    background: rgba(5, 8, 16, 0.22);
     color: #9fdcf6;
-
-    font-size: 20px;
-
+    font-size: 25px;
     cursor: pointer;
-
-    z-index: 10002;
-
+    pointer-events: auto;
+    z-index: 950;
     transition:
+      color 0.25s ease,
       background 0.25s ease,
-      border-color 0.25s ease,
       transform 0.25s ease;
   }
 
   .navbar-toggle:hover {
-    background: #13243d;
-
-    border-color: rgba(159, 220, 246, 0.35);
-
-    transform: translateY(-1px);
+    color: #ffffff;
+    background: rgba(159, 220, 246, 0.08);
+    transform: scale(1.05);
   }
-
-
-  /* =========================================
-     MOBILE / TABLET DRAWER
-     ========================================= */
 
   .navbar-links {
     position: fixed;
-
-    top: 74px;
+    top: 0;
     right: -390px;
-
     width: min(360px, 88vw);
-
-    height: calc(100vh - 74px);
-
+    height: 100dvh;
     margin: 0;
-
-    padding: 24px 20px 35px;
-
+    padding: 78px 20px 35px;
     display: flex;
-
     flex-direction: column;
-
     align-items: stretch;
     justify-content: flex-start;
-
     gap: 2px;
-
-    overflow-y: auto;
     overflow-x: hidden;
-
-    background:
-      linear-gradient(
-        180deg,
-        #101b2e 0%,
-        #091222 45%,
-        #050914 100%
-      );
-
+    overflow-y: auto;
+    background: linear-gradient(
+      180deg,
+      #101b2e 0%,
+      #091222 48%,
+      #050914 100%
+    );
     border-left: 1px solid rgba(159, 220, 246, 0.16);
-
-    box-shadow:
-      -25px 0 70px rgba(0, 0, 0, 0.55);
-
-    transition:
-      right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-
-    z-index: 10001;
-
+    box-shadow: -25px 0 70px rgba(0, 0, 0, 0.55);
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1100;
+    pointer-events: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(159, 220, 246, 0.25) transparent;
   }
@@ -540,19 +360,13 @@
 
   .navbar-links a {
     width: 100%;
-
     padding: 15px 12px;
-
     border-bottom: 1px solid rgba(159, 220, 246, 0.06);
-
-    font-size: 11px;
-
-    letter-spacing: 0.8px;
-
-    color: rgba(248, 250, 252, 0.68);
-
     border-radius: 6px;
-
+    color: rgba(248, 250, 252, 0.72);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
     transition:
       color 0.25s ease,
       background 0.25s ease,
@@ -561,96 +375,57 @@
 
   .navbar-links a:hover {
     color: #ffffff;
-
-    background: rgba(159, 220, 246, 0.05);
-
-    padding-left: 17px;
-
+    background: rgba(159, 220, 246, 0.06);
+    padding-left: 18px;
     transform: none;
   }
 
   .navbar-links a::after {
     left: 12px;
     right: auto;
-
     width: 32px;
-
     bottom: 5px;
   }
 
-
-  /* =========================================
-     MOBILE SHOP BUTTON INSIDE DRAWER
-     ========================================= */
-
   .shop-mobile {
     display: block;
-
     margin-top: 18px;
-
     padding-top: 10px;
   }
 
   .shop-mobile a {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     width: 100%;
-
     min-height: 46px;
-
+    padding: 13px;
     border: 1px solid rgba(217, 189, 114, 0.3);
-
     border-radius: 8px;
-
-    text-align: center;
-
-    background:
-      linear-gradient(
-        110deg,
-        #173b82,
-        #126b96,
-        #8f6d2e
-      );
-
+    background: linear-gradient(
+      110deg,
+      #173b82,
+      #126b96,
+      #8f6d2e
+    );
     color: #ffffff;
-
-    box-shadow:
-      0 10px 25px rgba(13, 96, 146, 0.18);
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(13, 96, 146, 0.18);
   }
-
-
-  /* =========================================
-     OVERLAY
-     ========================================= */
 
   .navbar-overlay {
     position: fixed;
-
-    top: 74px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
+    inset: 0;
     width: 100%;
-
+    height: 100%;
+    display: block;
     border: 0;
-
     padding: 0;
-
-    background:
-      rgba(0, 0, 0, 0.58);
-
+    background: rgba(0, 0, 0, 0.58);
     opacity: 0;
-
     visibility: hidden;
-
-    z-index: 10000;
-
+    pointer-events: none;
+    z-index: 1050;
     transition:
       opacity 0.3s ease,
       visibility 0.3s ease;
@@ -658,103 +433,65 @@
 
   .navbar-overlay.active {
     opacity: 1;
-
     visibility: visible;
+    pointer-events: auto;
   }
 }
 
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
 @media (max-width: 520px) {
-
-  .alberto-navbar {
-    height: 70px;
-  }
-
-  .navbar-inner {
-    width: 92%;
-
-    min-height: 70px;
-  }
-
   .alberto-logo {
-    gap: 8px;
+    top: 11px;
+    left: 12px;
   }
 
   .alberto-logo img {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
   }
 
   .alberto-logo > span {
-    font-size: 15px;
-
-    letter-spacing: 1.5px;
+    font-size: 14px;
+    letter-spacing: 1.3px;
   }
 
   .alberto-logo small {
-    font-size: 6px;
-
-    letter-spacing: 2.5px;
+    font-size: 5.5px;
+    letter-spacing: 2.2px;
   }
 
   .navbar-toggle {
-    width: 41px;
-    height: 41px;
-
-    font-size: 18px;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
   }
-
-
-  /* Drawer */
 
   .navbar-links {
-    top: 70px;
-
     width: min(340px, 90vw);
-
-    height: calc(100vh - 70px);
-
-    padding: 20px 16px 30px;
-  }
-
-  .navbar-overlay {
-    top: 70px;
-  }
-
-  .navbar-links a {
-    padding: 14px 11px;
-
-    font-size: 10px;
+    padding: 70px 16px 30px;
   }
 }
 
-
-/* =========================================
-   VERY SMALL PHONES
-   ========================================= */
-
 @media (max-width: 360px) {
-
-  .navbar-inner {
-    width: 94%;
+  .alberto-logo {
+    left: 10px;
   }
 
   .alberto-logo img {
-    width: 38px;
-    height: 38px;
+    width: 37px;
+    height: 37px;
   }
 
   .alberto-logo > span {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 
   .navbar-toggle {
-    width: 39px;
-    height: 39px;
+    right: 9px;
+    width: 38px;
+    height: 38px;
+    font-size: 21px;
   }
 
   .navbar-links {

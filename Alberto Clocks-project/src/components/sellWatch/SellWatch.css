@@ -1,7 +1,3 @@
-/* =========================================
-   SELL WATCH SECTION
-========================================= */
-
 .sell-watch-section {
   position: relative;
   min-height: 100vh;
@@ -31,11 +27,6 @@
   color: #f8fafc;
 }
 
-
-/* =========================================
-   GOLDEN SWIRLING BACKGROUND
-========================================= */
-
 .sell-watch-section::before,
 .sell-watch-section::after {
   content: "";
@@ -63,9 +54,6 @@
     );
 }
 
-
-/* Main golden path */
-
 .sell-watch-section::before {
   top: 35%;
 
@@ -78,9 +66,6 @@
     ease-in-out
     infinite alternate;
 }
-
-
-/* Second subtle crossing path */
 
 .sell-watch-section::after {
   top: 28%;
@@ -102,11 +87,6 @@
     ease-in-out
     infinite alternate;
 }
-
-
-/* =========================================
-   GOLDEN LINE MOVEMENT
-========================================= */
 
 @keyframes sellWatchLine {
 
@@ -136,7 +116,6 @@
 
 }
 
-
 @keyframes sellWatchLineReverse {
 
   0% {
@@ -165,20 +144,10 @@
 
 }
 
-
-/* =========================================
-   KEEP CONTENT ABOVE ANIMATION
-========================================= */
-
 .sell-watch-section > * {
   position: relative;
   z-index: 2;
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
 
 .sell-watch-header {
   max-width: 850px;
@@ -239,11 +208,6 @@
   color: rgba(248, 250, 252, 0.6);
 }
 
-
-/* =========================================
-   MAIN CARD
-========================================= */
-
 .sell-watch-card {
   position: relative;
 
@@ -273,11 +237,6 @@
 
   z-index: 3;
 }
-
-
-/* =========================================
-   CARD HEADER
-========================================= */
 
 .sell-watch-card-header {
   display: flex;
@@ -338,11 +297,6 @@
   font-weight: 800;
 }
 
-
-/* =========================================
-   FORM
-========================================= */
-
 .sell-watch-form {
   display: flex;
 
@@ -350,11 +304,6 @@
 
   gap: 45px;
 }
-
-
-/* =========================================
-   IMAGE UPLOAD
-========================================= */
 
 .watch-upload {
   padding: 45px 30px;
@@ -475,11 +424,6 @@
   color: rgba(248, 250, 252, 0.3);
 }
 
-
-/* =========================================
-   FORM SECTIONS
-========================================= */
-
 .form-section {
   display: flex;
 
@@ -518,11 +462,6 @@
 
   font-weight: 800;
 }
-
-
-/* =========================================
-   FORM ROW
-========================================= */
 
 .form-row {
   display: grid;
@@ -611,11 +550,6 @@
   min-height: 130px;
 }
 
-
-/* =========================================
-   CUSTOM BRAND
-========================================= */
-
 .custom-brand {
   animation:
     customBrandAppear 0.35s ease;
@@ -634,11 +568,6 @@
   }
 
 }
-
-
-/* =========================================
-   SUBMIT AREA
-========================================= */
 
 .sell-watch-submit {
   display: flex;
@@ -720,11 +649,6 @@
   transform: translateX(4px);
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
-
 @media (max-width: 992px) {
 
   .sell-watch-section {
@@ -742,11 +666,6 @@
   }
 
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 576px) {
 
@@ -810,8 +729,6 @@
   .sell-submit-button {
     width: 100%;
   }
-
-  /* Simplify background animation on small screens */
 
   .sell-watch-section::before {
     width: 170%;
