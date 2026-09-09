@@ -1,0 +1,156 @@
+/* =========================================
+   GLOBAL RESET
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE / SCROLL
+   ========================================= */
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+  width: 100%;
+  min-width: 320px;
+
+  /*
+    Navbar is fixed.
+    Desktop navbar = 82px
+  */
+  padding-top: 82px;
+
+  overflow-x: hidden;
+
+  background: #050814;
+}
+
+
+/* =========================================
+   FORM ELEMENTS
+   ========================================= */
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+/* =========================================
+   MEDIA
+   ========================================= */
+
+img,
+video {
+  max-width: 100%;
+}
+
+
+/* =========================================
+   SECTION ANCHOR POSITION
+   Prevents fixed navbar from covering headings
+   ========================================= */
+
+#products,
+#packages,
+#watch-parts,
+#technology,
+#gallery,
+#about,
+#store,
+#support,
+#contact,
+#sell-watch {
+  scroll-margin-top: 100px;
+}
+
+
+/* =========================================
+   ROOT
+   ========================================= */
+
+#root {
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: clip;
+}
+
+
+/* =========================================
+   PREVENT FLEX / GRID OVERFLOW
+   ========================================= */
+
+section,
+article,
+div {
+  min-width: 0;
+}
+
+
+/* =========================================
+   TABLET
+   Navbar height = 74px
+   ========================================= */
+
+@media (max-width: 1050px) {
+
+  body {
+    padding-top: 74px;
+  }
+
+  #products,
+  #packages,
+  #watch-parts,
+  #technology,
+  #gallery,
+  #about,
+  #store,
+  #support,
+  #contact,
+  #sell-watch {
+    scroll-margin-top: 90px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   Navbar height = 70px
+   ========================================= */
+
+@media (max-width: 520px) {
+
+  body {
+    padding-top: 70px;
+  }
+
+  #products,
+  #packages,
+  #watch-parts,
+  #technology,
+  #gallery,
+  #about,
+  #store,
+  #support,
+  #contact,
+  #sell-watch {
+    scroll-margin-top: 84px;
+  }
+}

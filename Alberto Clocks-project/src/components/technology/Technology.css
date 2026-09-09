@@ -1,0 +1,630 @@
+/* =========================================
+   TECHNOLOGY SECTION
+   ========================================= */
+
+.technology-section {
+  position: relative;
+
+  padding: 130px 5% 120px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      rgba(37, 99, 235, 0.10),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 88% 75%,
+      rgba(217, 189, 114, 0.045),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #050814 0%,
+      #0b1222 55%,
+      #111827 100%
+    );
+
+  color: #f8fafc;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.technology-header {
+  position: relative;
+  z-index: 2;
+
+  width: min(800px, 100%);
+
+  margin: 0 auto 85px;
+
+  text-align: center;
+}
+
+.technology-subtitle {
+  margin: 0 0 18px;
+
+  color: #d9bd72;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+.technology-header h2 {
+  margin: 0;
+
+  font-size: clamp(44px, 5vw, 67px);
+
+  line-height: 1.05;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+
+  color: #f8fafc;
+}
+
+.technology-header h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #f8fafc 0%,
+      #9fdcf6 55%,
+      #d9bd72 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.technology-intro {
+  max-width: 650px;
+
+  margin: 24px auto 0;
+
+  color: rgba(248, 250, 252, 0.56);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   TECHNOLOGY LIST
+   ========================================= */
+
+.technology-list {
+  position: relative;
+  z-index: 2;
+
+  width: min(1250px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TECHNOLOGY CONTENT
+   ========================================= */
+
+.technology-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: 75px;
+
+  margin-bottom: 105px;
+}
+
+
+/* Reverse layout */
+
+.technology-content.reverse {
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(0, 0.9fr);
+}
+
+.technology-content.reverse .technology-info {
+  order: 2;
+}
+
+.technology-content.reverse .technology-visual {
+  order: 1;
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.technology-number {
+  margin: 0 0 13px;
+
+  color: #9fdcf6;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.technology-info h3 {
+  margin: 0 0 22px;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  color: #f8fafc;
+}
+
+.technology-info > p:not(.technology-number) {
+  max-width: 560px;
+
+  margin: 0 0 18px;
+
+  color: rgba(248, 250, 252, 0.58);
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   TECHNOLOGY IMAGE FRAME
+   ========================================= */
+
+.technology-visual {
+  position: relative;
+
+  width: 100%;
+
+  /*
+    Fixed visual frame keeps all three
+    technology cards perfectly aligned.
+  */
+
+  height: 540px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(159, 220, 246, 0.15);
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101827,
+      #080f1d
+    );
+
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.38);
+
+  isolation: isolate;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* Inner premium frame */
+
+.technology-visual::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  z-index: 2;
+
+  border: 1px solid rgba(217, 189, 114, 0.13);
+
+  border-radius: 15px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TECHNOLOGY IMAGE
+   ========================================= */
+
+/*
+   IMPORTANT:
+   The image now fills the complete frame.
+   No padding.
+   No empty space.
+   No stretching.
+*/
+
+.technology-visual img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  padding: 0;
+
+  margin: 0;
+
+  border: 0;
+
+  filter:
+    brightness(0.96)
+    saturate(0.95);
+
+  transform: scale(1.01);
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+
+/* Subtle hover */
+
+.technology-content:hover .technology-visual {
+  transform: translateY(-4px);
+
+  border-color: rgba(159, 220, 246, 0.25);
+
+  box-shadow:
+    0 32px 75px rgba(0, 0, 0, 0.48),
+    0 0 30px rgba(159, 220, 246, 0.045);
+}
+
+.technology-content:hover .technology-visual img {
+  transform: scale(1.045);
+
+  filter:
+    brightness(1.02)
+    saturate(1);
+}
+
+
+/* =========================================
+   IMAGE DARK EDGE
+   ========================================= */
+
+.technology-visual::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 18, 0.02) 45%,
+      rgba(3, 7, 18, 0.34) 100%
+    );
+}
+
+
+/* =========================================
+   IMAGE CAPTION
+   ========================================= */
+
+.technology-caption {
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 22px;
+
+  z-index: 3;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+  .technology-section {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .technology-content,
+  .technology-content.reverse {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(0, 1.1fr);
+
+    gap: 45px;
+  }
+
+  .technology-visual {
+    height: 500px;
+  }
+
+  .technology-info h3 {
+    font-size: 36px;
+  }
+}
+
+
+/* =========================================
+   SMALL TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .technology-section {
+    padding: 110px 6% 90px;
+  }
+
+  .technology-header {
+    margin-bottom: 65px;
+  }
+
+  .technology-content,
+  .technology-content.reverse {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-bottom: 80px;
+  }
+
+  /*
+    On tablet/mobile, text always comes first.
+    Image follows underneath.
+  */
+
+  .technology-content.reverse .technology-info,
+  .technology-content.reverse .technology-visual {
+    order: initial;
+  }
+
+  .technology-info {
+    max-width: 700px;
+  }
+
+  .technology-info > p:not(.technology-number) {
+    max-width: 680px;
+  }
+
+  .technology-visual {
+    width: 100%;
+
+    height: 470px;
+
+    border-radius: 20px;
+  }
+}
+
+
+/* =========================================
+   TABLET PORTRAIT
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .technology-section {
+    padding: 100px 5% 85px;
+  }
+
+  .technology-header {
+    width: 100%;
+
+    margin-bottom: 60px;
+  }
+
+  .technology-header h2 {
+    font-size: 44px;
+  }
+
+  .technology-intro {
+    font-size: 15px;
+  }
+
+  .technology-content,
+  .technology-content.reverse {
+    gap: 30px;
+
+    margin-bottom: 75px;
+  }
+
+  .technology-info h3 {
+    font-size: 34px;
+  }
+
+  .technology-info > p:not(.technology-number) {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .technology-visual {
+    height: 430px;
+
+    border-radius: 18px;
+  }
+
+  .technology-visual::after {
+    inset: 10px;
+
+    border-radius: 13px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .technology-section {
+    padding: 90px 5% 75px;
+  }
+
+  .technology-header {
+    margin-bottom: 55px;
+  }
+
+  .technology-subtitle {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .technology-header h2 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .technology-intro {
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .technology-content,
+  .technology-content.reverse {
+    gap: 27px;
+
+    margin-bottom: 65px;
+  }
+
+  .technology-number {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .technology-info h3 {
+    margin-bottom: 18px;
+
+    font-size: 30px;
+  }
+
+  .technology-info > p:not(.technology-number) {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  /*
+    Mobile image frame.
+    Portrait source images will crop naturally
+    instead of leaving empty space.
+  */
+
+  .technology-visual {
+    width: 100%;
+
+    height: 350px;
+
+    border-radius: 16px;
+  }
+
+  .technology-visual img {
+    object-position: center center;
+
+    transform: scale(1.015);
+  }
+
+  .technology-content:hover .technology-visual img {
+    transform: scale(1.03);
+  }
+
+  .technology-visual::after {
+    inset: 9px;
+
+    border-radius: 11px;
+  }
+
+  .technology-caption {
+    left: 18px;
+
+    bottom: 17px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+  .technology-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .technology-header h2 {
+    font-size: 34px;
+  }
+
+  .technology-info h3 {
+    font-size: 28px;
+  }
+
+  .technology-visual {
+    height: 315px;
+  }
+}

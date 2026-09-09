@@ -1,0 +1,838 @@
+/* =========================================
+   SELL WATCH SECTION
+========================================= */
+
+.sell-watch-section {
+  position: relative;
+  min-height: 100vh;
+
+  padding: 150px 7% 130px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(212, 175, 55, 0.06),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(125, 211, 252, 0.05),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #050816 0%,
+      #0b1020 50%,
+      #111a30 100%
+    );
+
+  color: #f8fafc;
+}
+
+
+/* =========================================
+   GOLDEN SWIRLING BACKGROUND
+========================================= */
+
+.sell-watch-section::before,
+.sell-watch-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 115%;
+  height: 650px;
+
+  left: -7%;
+
+  pointer-events: none;
+
+  border: 1px solid
+    rgba(212, 175, 55, 0.24);
+
+  border-radius: 50%;
+
+  z-index: 0;
+
+  filter:
+    drop-shadow(
+      0 0 6px
+      rgba(212, 175, 55, 0.18)
+    );
+}
+
+
+/* Main golden path */
+
+.sell-watch-section::before {
+  top: 35%;
+
+  transform:
+    rotate(-18deg)
+    translateX(-15%);
+
+  animation:
+    sellWatchLine 15s
+    ease-in-out
+    infinite alternate;
+}
+
+
+/* Second subtle crossing path */
+
+.sell-watch-section::after {
+  top: 28%;
+
+  width: 100%;
+  height: 520px;
+
+  left: 8%;
+
+  border-color:
+    rgba(230, 190, 75, 0.12);
+
+  transform:
+    rotate(20deg)
+    translateX(12%);
+
+  animation:
+    sellWatchLineReverse 18s
+    ease-in-out
+    infinite alternate;
+}
+
+
+/* =========================================
+   GOLDEN LINE MOVEMENT
+========================================= */
+
+@keyframes sellWatchLine {
+
+  0% {
+    transform:
+      rotate(-18deg)
+      translate(-15%, 90px);
+  }
+
+  35% {
+    transform:
+      rotate(-15deg)
+      translate(-2%, 20px);
+  }
+
+  70% {
+    transform:
+      rotate(-20deg)
+      translate(8%, -35px);
+  }
+
+  100% {
+    transform:
+      rotate(-17deg)
+      translate(18%, -90px);
+  }
+
+}
+
+
+@keyframes sellWatchLineReverse {
+
+  0% {
+    transform:
+      rotate(20deg)
+      translate(15%, -70px);
+  }
+
+  40% {
+    transform:
+      rotate(17deg)
+      translate(3%, 10px);
+  }
+
+  75% {
+    transform:
+      rotate(22deg)
+      translate(-7%, 50px);
+  }
+
+  100% {
+    transform:
+      rotate(18deg)
+      translate(-18%, 100px);
+  }
+
+}
+
+
+/* =========================================
+   KEEP CONTENT ABOVE ANIMATION
+========================================= */
+
+.sell-watch-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.sell-watch-header {
+  max-width: 850px;
+
+  margin: 0 auto 85px;
+
+  text-align: center;
+}
+
+.sell-watch-subtitle {
+  margin: 0 0 24px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  color: #d4af37;
+}
+
+.sell-watch-header h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 4.8vw, 68px);
+
+  line-height: 1.1;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+.sell-watch-header h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #d4af37,
+      #f1d77a,
+      #fff4b0
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.sell-watch-intro {
+  max-width: 650px;
+
+  margin: 28px auto 0;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: rgba(248, 250, 252, 0.6);
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.sell-watch-card {
+  position: relative;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  padding: 50px;
+
+  border: 1px solid
+    rgba(212, 175, 55, 0.16);
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(19, 29, 48, 0.94),
+      rgba(8, 15, 29, 0.97)
+    );
+
+  box-shadow:
+    0 35px 100px
+    rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(12px);
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.sell-watch-card-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding-bottom: 30px;
+
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid
+    rgba(212, 175, 55, 0.1);
+}
+
+.sell-watch-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background:
+    rgba(212, 175, 55, 0.07);
+
+  border: 1px solid
+    rgba(212, 175, 55, 0.22);
+
+  color: #d4af37;
+
+  font-size: 24px;
+}
+
+.sell-watch-card-header p {
+  margin: 0 0 6px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #d4af37;
+}
+
+.sell-watch-card-header h3 {
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.sell-watch-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 45px;
+}
+
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+.watch-upload {
+  padding: 45px 30px;
+
+  text-align: center;
+
+  border: 1px dashed
+    rgba(212, 175, 55, 0.35);
+
+  border-radius: 14px;
+
+  background:
+    rgba(212, 175, 55, 0.025);
+
+  transition: all 0.35s ease;
+}
+
+.watch-upload:hover {
+  border-color:
+    rgba(212, 175, 55, 0.65);
+
+  background:
+    rgba(212, 175, 55, 0.045);
+}
+
+.upload-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(212, 175, 55, 0.08);
+
+  color: #d4af37;
+
+  font-size: 23px;
+}
+
+.watch-upload h4 {
+  margin: 0 0 8px;
+
+  font-size: 19px;
+
+  font-weight: 800;
+}
+
+.watch-upload p {
+  max-width: 450px;
+
+  margin: 0 auto 22px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: rgba(248, 250, 252, 0.5);
+}
+
+.watch-upload input {
+  display: none;
+}
+
+.upload-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 20px;
+
+  border: 1px solid
+    rgba(212, 175, 55, 0.35);
+
+  border-radius: 7px;
+
+  color: #d4af37;
+
+  background:
+    rgba(212, 175, 55, 0.05);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+  background: #d4af37;
+
+  color: #080d18;
+
+  border-color: #d4af37;
+
+  transform: translateY(-2px);
+}
+
+.watch-upload small {
+  display: block;
+
+  margin-top: 14px;
+
+  font-size: 10px;
+
+  color: rgba(248, 250, 252, 0.3);
+}
+
+
+/* =========================================
+   FORM SECTIONS
+========================================= */
+
+.form-section {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.form-section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid
+    rgba(125, 211, 252, 0.08);
+}
+
+.form-section-title span {
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #d4af37;
+}
+
+.form-section-title h4 {
+  margin: 0;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.form-group label {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: rgba(248, 250, 252, 0.65);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid
+    rgba(125, 211, 252, 0.13);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background:
+    rgba(5, 10, 25, 0.65);
+
+  color: #f8fafc;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color:
+    rgba(248, 250, 252, 0.28);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #d4af37;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(212, 175, 55, 0.07);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #111827;
+
+  color: #f8fafc;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 130px;
+}
+
+
+/* =========================================
+   CUSTOM BRAND
+========================================= */
+
+.custom-brand {
+  animation:
+    customBrandAppear 0.35s ease;
+}
+
+@keyframes customBrandAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   SUBMIT AREA
+========================================= */
+
+.sell-watch-submit {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 10px;
+}
+
+.sell-watch-submit p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  color:
+    rgba(248, 250, 252, 0.35);
+}
+
+.sell-submit-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  padding: 15px 24px;
+
+  border: 1px solid
+    rgba(212, 175, 55, 0.45);
+
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b8942e,
+      #d4af37,
+      #e8c95a
+    );
+
+  color: #080d18;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.sell-submit-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(212, 175, 55, 0.2);
+}
+
+.sell-submit-button i:last-child {
+  transition: transform 0.3s ease;
+}
+
+.sell-submit-button:hover i:last-child {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .sell-watch-section {
+    padding: 110px 6% 90px;
+  }
+
+  .sell-watch-card {
+    padding: 38px;
+  }
+
+  .sell-watch-submit {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+  .sell-watch-section {
+    padding: 90px 6% 75px;
+  }
+
+  .sell-watch-header {
+    margin-bottom: 60px;
+  }
+
+  .sell-watch-subtitle {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .sell-watch-header h2 {
+    font-size: 38px;
+  }
+
+  .sell-watch-intro {
+    font-size: 15px;
+  }
+
+  .sell-watch-card {
+    padding: 25px 20px;
+
+    border-radius: 16px;
+  }
+
+  .sell-watch-card-header h3 {
+    font-size: 23px;
+  }
+
+  .sell-watch-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 21px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .watch-upload {
+    padding: 35px 20px;
+  }
+
+  .sell-watch-submit {
+    gap: 20px;
+  }
+
+  .sell-watch-submit p {
+    font-size: 10px;
+  }
+
+  .sell-submit-button {
+    width: 100%;
+  }
+
+  /* Simplify background animation on small screens */
+
+  .sell-watch-section::before {
+    width: 170%;
+    height: 480px;
+
+    left: -35%;
+
+    top: 42%;
+
+    opacity: 0.7;
+  }
+
+  .sell-watch-section::after {
+    width: 150%;
+    height: 400px;
+
+    left: 0;
+
+    top: 38%;
+
+    opacity: 0.5;
+  }
+
+}

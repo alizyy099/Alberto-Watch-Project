@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Starter",
+    "tag": "EVERYDAY",
+    "price": 499,
+    "watch": "Royal Heritage",
+    "image": "/images/watches/royal-heritage.jpg",
+    "description": "A polished everyday set for anyone starting a refined watch collection.",
+    "deal": "Complimentary first strap adjustment and premium gift presentation.",
+    "items": [
+      "Royal Heritage timepiece",
+      "Premium leather strap",
+      "Protective presentation case",
+      "Alberto care guide",
+      "First strap adjustment"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Luxury Care",
+    "tag": "SIGNATURE",
+    "price": 1399,
+    "watch": "Aurelius Rose",
+    "image": "/images/watches/aurelius-rose.jpg",
+    "description": "A luxury package pairing a signature timepiece with care and presentation essentials.",
+    "deal": "Complimentary cleaning, inspection and priority service appointment.",
+    "items": [
+      "Aurelius Rose timepiece",
+      "Premium leather strap",
+      "Luxury presentation box",
+      "Watch care kit",
+      "Priority service access"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Smart Essentials",
+    "tag": "CONNECTED",
+    "price": 799,
+    "watch": "Alberto Smart One",
+    "image": "/images/watches/smart-watch-1.jpg",
+    "description": "A connected everyday set with useful accessories and a polished smart profile.",
+    "deal": "Complimentary setup assistance and protective screen coverage.",
+    "items": [
+      "Alberto Smart One",
+      "Magnetic charging dock",
+      "Premium alternate strap",
+      "Protective case",
+      "Setup assistance"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Collector's Edition",
+    "tag": "EXCLUSIVE",
+    "price": 1699,
+    "watch": "Eclipse Skeleton",
+    "image": "/images/watches/eclipse-skeleton.jpg",
+    "description": "A statement collector package built around Alberto's most dramatic mechanical-inspired design.",
+    "deal": "Complimentary collector care kit and priority service access.",
+    "items": [
+      "Eclipse Skeleton timepiece",
+      "Luxury presentation box",
+      "Additional leather strap",
+      "Collector certificate",
+      "Priority care service"
+    ]
+  }
+]

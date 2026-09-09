@@ -1,0 +1,229 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: #0b1020;
+}
+
+
+/* =========================
+   BACKGROUND VIDEO
+========================= */
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   VIDEO OVERLAY
+========================= */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5, 10, 25, 0.68) 0%,
+    rgba(5, 10, 25, 0.38) 42%,
+    rgba(5, 10, 25, 0.12) 75%,
+    rgba(5, 10, 25, 0.05) 100%
+  );
+
+  z-index: 1;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin-left: 7%;
+  padding-top: 30px;
+
+  text-align: left;
+}
+
+
+/* =========================
+   ALBERTO WATCH
+========================= */
+
+.hero-brand {
+  margin: 0 0 28px 0;
+
+  font-size: clamp(68px, 7vw, 105px);
+  line-height: 0.95;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  /* Dark Blue → Blue → Light Blue → White */
+  background: linear-gradient(
+    100deg,
+    #0e317096 0%,
+    #4374ac 25%,
+    #658cb6 55%,
+    #95a1b1 78%,
+    #ecece1 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  /* Actual transparency */
+  opacity: 0.80;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.hero-content h1 {
+  margin: 0;
+
+  /*
+     Smaller than ALBERTO WATCH
+  */
+  font-size: clamp(55px, 5.2vw, 78px);
+
+  line-height: 0.98;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+
+  /*
+     Soft white → silver → blue
+  */
+  background: linear-gradient(
+    105deg,
+    #2f508d96 0%,
+    #669bd8 35%,
+    #658cb6 65%,
+    #edeff1 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  opacity: 0.72;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+  max-width: 540px;
+
+  margin-top: 32px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  font-weight: 400;
+
+  color: rgba(248, 250, 252, 0.68);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .hero-content {
+    margin-left: 6%;
+    margin-right: 5%;
+  }
+
+  .hero-brand {
+    font-size: clamp(55px, 8vw, 80px);
+  }
+
+  .hero-content h1 {
+    font-size: clamp(48px, 6vw, 65px);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    margin-left: 7%;
+    margin-right: 6%;
+    padding-top: 30px;
+  }
+
+  .hero-brand {
+    font-size: 42px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.78;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(42px, 12vw, 58px);
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    opacity: 0.72;
+  }
+
+  .hero-description {
+    margin-top: 24px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+}

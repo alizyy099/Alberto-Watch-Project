@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Vintage",
+    "image": "/images/watches/heritage-rect.jpg",
+    "description": "Classic silhouettes, warm leather and enduring character."
+  },
+  {
+    "name": "Luxury",
+    "image": "/images/watches/aurelius-rose.jpg",
+    "description": "Elevated finishes and statement designs for special occasions."
+  },
+  {
+    "name": "Smart",
+    "image": "/images/watches/smart-watch-1.jpg",
+    "description": "Connected features wrapped in a polished Alberto design."
+  },
+  {
+    "name": "Classic",
+    "image": "/images/watches/classic-blue.jpg",
+    "description": "Balanced proportions and timeless everyday elegance."
+  },
+  {
+    "name": "Sports",
+    "image": "/images/watches/emerald-sport.jpg",
+    "description": "Confident, performance-inspired designs for active days."
+  },
+  {
+    "name": "Automatic",
+    "image": "/images/watches/silver-chrono.jpg",
+    "description": "Mechanical-inspired character with a focus on precision and craft."
+  }
+]

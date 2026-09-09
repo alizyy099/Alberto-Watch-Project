@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Leather Strap",
+    "category": "Watch Strap",
+    "price": 49,
+    "image": "/images/parts/premium-leather-strap.jpg",
+    "description": "A premium replacement strap with a refined leather finish and comfortable everyday fit.",
+    "note": "Available in classic tones; confirm your case width before ordering."
+  },
+  {
+    "id": 2,
+    "name": "Precision Gear Set",
+    "category": "Movement Parts",
+    "price": 89,
+    "image": "/images/parts/precision-gear-set.jpg",
+    "description": "A complete conceptual gear set for compatible mechanical watch servicing and restoration.",
+    "note": "Professional installation is recommended for movement components."
+  },
+  {
+    "id": 3,
+    "name": "Watch Battery",
+    "category": "Power",
+    "price": 19,
+    "image": "/images/parts/watch-battery.jpg",
+    "description": "A dependable replacement battery for compatible quartz timepieces.",
+    "note": "Battery compatibility should be checked before installation."
+  },
+  {
+    "id": 4,
+    "name": "Protective Watch Glass",
+    "category": "Crystal",
+    "price": 39,
+    "image": "/images/parts/protective-watch-glass.jpg",
+    "description": "A clean replacement crystal designed to restore protection and clarity to the dial.",
+    "note": "Choose the correct crystal size and profile before ordering."
+  }
+]

@@ -1,0 +1,597 @@
+/* =========================================
+   SUPPORT SECTION
+========================================= */
+
+.support-section {
+  position: relative;
+  min-height: 100vh;
+
+  padding: 140px 7% 120px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(212, 175, 55, 0.035),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(212, 175, 55, 0.025),
+      transparent 30%
+    ),
+    #0b1020;
+
+  color: #f8fafc;
+}
+
+/* =========================================
+   SUBTLE GOLD TRAVELING LINES
+========================================= */
+
+.support-section::before,
+.support-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120%;
+  height: 260px;
+
+  left: -10%;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  border-top: 1px solid
+    rgba(212, 175, 55, 0.28);
+
+  border-radius: 50%;
+
+  filter:
+    drop-shadow(
+      0 0 5px
+      rgba(212, 175, 55, 0.18)
+    );
+}
+
+
+/* Upper travelling line */
+
+.support-section::before {
+  top: 34%;
+
+  transform:
+    rotate(-7deg)
+    translateX(-8%);
+
+  animation:
+    supportLineTop 12s
+    ease-in-out
+    infinite alternate;
+}
+
+
+/* Lower travelling line */
+
+.support-section::after {
+  top: 42%;
+
+  transform:
+    rotate(7deg)
+    translateX(8%);
+
+  border-top-color:
+    rgba(230, 190, 75, 0.22);
+
+  animation:
+    supportLineBottom 14s
+    ease-in-out
+    infinite alternate;
+}
+
+
+/* =========================================
+   LINE MOVEMENT
+========================================= */
+
+@keyframes supportLineTop {
+
+  0% {
+    transform:
+      rotate(-7deg)
+      translateX(-14%);
+  }
+
+  50% {
+    transform:
+      rotate(-7deg)
+      translateX(2%);
+  }
+
+  100% {
+    transform:
+      rotate(-7deg)
+      translateX(14%);
+  }
+
+}
+
+
+@keyframes supportLineBottom {
+
+  0% {
+    transform:
+      rotate(7deg)
+      translateX(14%);
+  }
+
+  50% {
+    transform:
+      rotate(7deg)
+      translateX(-2%);
+  }
+
+  100% {
+    transform:
+      rotate(7deg)
+      translateX(-14%);
+  }
+
+}
+
+
+.support-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.support-card {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.support-header {
+  max-width: 850px;
+
+  margin: 0 auto 80px;
+
+  text-align: center;
+}
+
+.support-subtitle {
+  margin: 0 0 24px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  color: #7dd3fc;
+}
+
+.support-header h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 4.5vw, 64px);
+
+  line-height: 1.15;
+
+  font-weight: 900;
+}
+
+.support-header h2 span {
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #60a5fa,
+    #bae6fd
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.support-intro {
+  max-width: 650px;
+
+  margin: 28px auto 0;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: rgba(248, 250, 252, 0.62);
+}
+
+
+/* =========================================
+   SUPPORT CARD
+========================================= */
+
+.support-card {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 45px;
+
+  border: 1px solid rgba(125, 211, 252, 0.18);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24, 34, 54, 0.95),
+      rgba(13, 21, 37, 0.98)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.support-card-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding-bottom: 30px;
+
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid
+    rgba(125, 211, 252, 0.12);
+}
+
+.support-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #7dd3fc;
+
+  background: rgba(125, 211, 252, 0.08);
+
+  border: 1px solid
+    rgba(125, 211, 252, 0.25);
+
+  font-size: 23px;
+}
+
+.support-card-header p {
+  margin: 0 0 5px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #7dd3fc;
+}
+
+.support-card-header h3 {
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.support-contact {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 18px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid
+    rgba(125, 211, 252, 0.08);
+}
+
+.contact-item > i {
+  font-size: 18px;
+
+  color: #7dd3fc;
+}
+
+.contact-item div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  min-width: 0;
+}
+
+.contact-item small {
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  color: rgba(248, 250, 252, 0.4);
+}
+
+.contact-item span {
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: rgba(248, 250, 252, 0.75);
+
+  word-break: break-word;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.support-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.form-group label {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: rgba(248, 250, 252, 0.65);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid
+    rgba(125, 211, 252, 0.15);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: rgba(5, 10, 25, 0.6);
+
+  color: #f8fafc;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(248, 250, 252, 0.3);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #7dd3fc;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(125, 211, 252, 0.08);
+}
+
+
+/* Select */
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #111827;
+
+  color: #f8fafc;
+}
+
+
+/* Textarea */
+
+.message-group {
+  grid-column: 1 / -1;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 150px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.support-submit {
+  grid-column: 1 / -1;
+
+  justify-self: start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 25px;
+
+  border: 1px solid
+    rgba(125, 211, 252, 0.4);
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #7dd3fc;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.support-submit:hover {
+  background: #7dd3fc;
+
+  color: #080d18;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(125, 211, 252, 0.18);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .support-section {
+    padding: 110px 6% 90px;
+  }
+
+  .support-card {
+    padding: 35px;
+  }
+
+  .support-contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+  .support-section {
+    padding: 90px 6% 75px;
+  }
+
+  .support-header {
+    margin-bottom: 55px;
+  }
+
+  .support-subtitle {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .support-header h2 {
+    font-size: 38px;
+  }
+
+  .support-intro {
+    font-size: 15px;
+  }
+
+  .support-card {
+    padding: 25px 20px;
+
+    border-radius: 16px;
+  }
+
+  .support-card-header h3 {
+    font-size: 24px;
+  }
+
+  .support-form {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .message-group,
+  .support-submit {
+    grid-column: auto;
+  }
+
+  .support-submit {
+    width: 100%;
+
+    justify-content: center;
+  }
+}

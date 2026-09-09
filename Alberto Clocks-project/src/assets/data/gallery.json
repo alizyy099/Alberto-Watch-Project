@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Aurelius Rose",
+    "category": "Signature Luxury",
+    "image": "/images/watches/aurelius-rose.jpg",
+    "price": 1199
+  },
+  {
+    "name": "Monarch Blue",
+    "category": "Signature Luxury",
+    "image": "/images/watches/monarch-blue.jpg",
+    "price": 1299
+  },
+  {
+    "name": "Eclipse Skeleton",
+    "category": "Signature Luxury",
+    "image": "/images/watches/eclipse-skeleton.jpg",
+    "price": 1399
+  },
+  {
+    "name": "Prestige Chronograph",
+    "category": "Signature Luxury",
+    "image": "/images/watches/prestige-chrono.jpg",
+    "price": 1099
+  },
+  {
+    "name": "Alberto Chronos X",
+    "category": "Future Collection",
+    "image": "/images/gallery/alberto-chronos-x.jpg",
+    "comingSoon": true
+  },
+  {
+    "name": "Aurelius Prime",
+    "category": "Luxury Collection",
+    "image": "/images/gallery/aurelius-prime.jpg",
+    "comingSoon": true
+  },
+  {
+    "name": "Alberto Nova",
+    "category": "Smart Collection",
+    "image": "/images/gallery/alberto-nova.jpg",
+    "comingSoon": true
+  }
+]

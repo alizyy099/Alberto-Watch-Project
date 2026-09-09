@@ -1,0 +1,41 @@
+{
+  "storyTitle": "Crafted Around Time",
+  "story": [
+    "Since 1985, Alberto has been dedicated to the art of fine timekeeping. What began as a small watchmaking store grew into a trusted destination for carefully selected timepieces, professional service, and timeless design.",
+    "Today, Alberto combines traditional watchmaking values with modern technology, offering physical retail experiences alongside a convenient online collection."
+  ],
+  "highlights": [
+    {
+      "title": "Physical Stores",
+      "icon": "bi-shop",
+      "text": "Personal service and watch consultation in a refined retail environment."
+    },
+    {
+      "title": "Online Collection",
+      "icon": "bi-globe2",
+      "text": "Explore selected timepieces from wherever you are."
+    },
+    {
+      "title": "Expert Service",
+      "icon": "bi-tools",
+      "text": "Professional repair, maintenance and customer assistance."
+    }
+  ],
+  "slides": [
+    {
+      "image": "/images/about/about-img1.png",
+      "title": "Our Workshop",
+      "text": "Where precision and craftsmanship come together."
+    },
+    {
+      "image": "/images/about/about-img2.png",
+      "title": "Our Store",
+      "text": "A refined space created for every watch customer."
+    },
+    {
+      "image": "/images/about/about-img3.png",
+      "title": "Our Service",
+      "text": "Professional assistance built around every customer."
+    }
+  ]
+}

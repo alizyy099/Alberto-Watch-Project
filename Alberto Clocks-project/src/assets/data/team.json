@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "role": "MASTER WATCHMAKER",
+    "name": "Alizy Shiraz",
+    "title": "Precision Movement Specialist",
+    "image": "/images/team/master-watchmaker.png"
+  },
+  {
+    "id": 2,
+    "role": "STORE MANAGER",
+    "name": "Sophia Bennett",
+    "title": "Customer Experience",
+    "image": "/images/team/store-manager.png"
+  },
+  {
+    "id": 3,
+    "role": "SERVICE SPECIALIST",
+    "name": "Emma Wilson",
+    "title": "Repair & Maintenance",
+    "image": "/images/team/service-specialist.png"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "number": "01",
+    "title": "Precision Movement",
+    "image": "/images/technology-1.png",
+    "paragraphs": [
+      "The heart of a mechanical timepiece is its movement. Carefully engineered gears, springs and precision components work together to support accurate timekeeping and smooth mechanical operation.",
+      "Selected internal components feature a refined gold-toned finish, reflecting the attention given to even the smallest details."
+    ]
+  },
+  {
+    "number": "02",
+    "title": "Premium Materials",
+    "image": "/images/technology-2.png",
+    "paragraphs": [
+      "The exterior balances durability with luxury. Carefully selected premium leather creates a soft feel, refined texture and comfortable fit.",
+      "The case and dial are designed to complement these materials while maintaining a sophisticated, timeless appearance."
+    ]
+  },
+  {
+    "number": "03",
+    "title": "Power & Reliability",
+    "image": "/images/technology-3.png",
+    "paragraphs": [
+      "Modern timepieces require dependable power management. Alberto's conceptual collection uses carefully selected power systems designed for consistent everyday performance.",
+      "Each system is chosen to complement the specific requirements of its watch design."
+    ]
+  }
+]
