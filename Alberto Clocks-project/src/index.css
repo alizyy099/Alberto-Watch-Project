@@ -154,3 +154,55 @@ div {
     scroll-margin-top: 84px;
   }
 }
+
+/* =========================================
+   GLOBAL ALBERTO TOAST NOTIFICATION
+   ========================================= */
+
+.alberto-toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  background: rgba(10, 15, 34, 0.96);
+  border: 1px solid #d9bd72;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(217, 189, 114, 0.25);
+  backdrop-filter: blur(10px);
+  animation: toastSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.alberto-toast i {
+  font-size: 18px;
+  color: #d9bd72;
+}
+
+.alberto-toast.info i {
+  color: #38bdf8;
+}
+
+.alberto-toast.error {
+  border-color: #ef4444;
+}
+
+.alberto-toast.error i {
+  color: #ef4444;
+}
+
+@keyframes toastSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

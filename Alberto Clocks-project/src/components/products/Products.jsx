@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react'
+import { useShop } from '../../context/useShop'
 import products from '../../assets/data/products.json'
 import categories from '../../assets/data/categories.json'
 import './Products.css'
 
 function Products() {
+  const { navigateTo, addToCart } = useShop()
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [sortBy, setSortBy] = useState('latest')
   const [showAll, setShowAll] = useState(false)
@@ -35,9 +37,7 @@ function Products() {
     : filteredProducts.slice(0, 12)
 
   const handleProductOrder = (product) => {
-    alert(
-      `Order confirmed: ${product.name} — $${product.price.toLocaleString()}. Thank you for choosing Alberto.`
-    )
+    addToCart(product, {}, 1)
   }
 
   const chooseCategory = (category) => {
@@ -63,7 +63,7 @@ function Products() {
 
         <p className="products-intro">
           Start with a collection, then refine your selection by popularity,
-          latest arrivals, or price.
+          latest arrivals, or explore our complete catalog with advanced horology filters.
         </p>
       </div>
 
@@ -126,25 +126,37 @@ function Products() {
             <span>{filteredProducts.length} timepieces available</span>
           </div>
 
-          <label className="sort-control">
-            <span>
-              <i className="bi bi-sliders2"></i>
-              Sort By
-            </span>
-
-            <select
-              value={sortBy}
-              onChange={(event) => {
-                setSortBy(event.target.value)
-                setShowAll(false)
-              }}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
+            <button
+              type="button"
+              className="shop-now-btn"
+              style={{ minHeight: '38px', padding: '8px 16px', fontSize: '11px' }}
+              onClick={() => navigateTo('shop', null, { category: selectedCategory })}
             >
-              <option value="latest">Latest Watches</option>
-              <option value="popular">Most Popular</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="price-low">Price: Low to High</option>
-            </select>
-          </label>
+              <i className="bi bi-sliders"></i>
+              Filter & Search in Shop
+            </button>
+
+            <label className="sort-control">
+              <span>
+                <i className="bi bi-sliders2"></i>
+                Sort By
+              </span>
+
+              <select
+                value={sortBy}
+                onChange={(event) => {
+                  setSortBy(event.target.value)
+                  setShowAll(false)
+                }}
+              >
+                <option value="latest">Latest Watches</option>
+                <option value="popular">Most Popular</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="price-low">Price: Low to High</option>
+              </select>
+            </label>
+          </div>
         </div>
 
         <div className="products-grid">
@@ -153,20 +165,25 @@ function Products() {
               <button
                 type="button"
                 className="product-image"
-                onClick={() => setSelectedProduct(product)}
+                onClick={() => navigateTo('product', product.id)}
                 aria-label={`View ${product.name}`}
               >
                 <img src={product.image} alt={product.name} />
 
                 <span className="product-view">
                   <i className="bi bi-eye"></i>
-                  View Details
+                  View Details & Zoom
                 </span>
               </button>
 
               <div className="product-info">
                 <p className="product-category">{product.category}</p>
-                <h3>{product.name}</h3>
+                <h3
+                  onClick={() => navigateTo('product', product.id)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {product.name}
+                </h3>
 
                 <p className="product-description">
                   {product.description}
@@ -181,7 +198,7 @@ function Products() {
                     <button
                       type="button"
                       className="details-button"
-                      onClick={() => setSelectedProduct(product)}
+                      onClick={() => navigateTo('product', product.id)}
                     >
                       Details
                       <i className="bi bi-arrow-up-right"></i>
@@ -191,6 +208,7 @@ function Products() {
                       type="button"
                       className="buy-button"
                       onClick={() => handleProductOrder(product)}
+                      title="Add to luxury bag"
                     >
                       Buy
                       <i className="bi bi-bag-check"></i>
@@ -269,14 +287,37 @@ function Products() {
                 {selectedProduct.description}
               </p>
 
-              <button
-                type="button"
-                className="modal-action"
-                onClick={() => handleProductOrder(selectedProduct)}
-              >
-                Buy Now
-                <i className="bi bi-bag-check"></i>
-              </button>
+              <div style={{ display: 'flex', gap: '10px', marginTop: '14px' }}>
+                <button
+                  type="button"
+                  className="modal-action"
+                  onClick={() => {
+                    handleProductOrder(selectedProduct)
+                    setSelectedProduct(null)
+                  }}
+                >
+                  Add to Bag
+                  <i className="bi bi-bag-check"></i>
+                </button>
+
+                <button
+                  type="button"
+                  className="modal-action"
+                  style={{
+                    background: 'transparent',
+                    border: '1px solid #d9bd72',
+                    color: '#d9bd72'
+                  }}
+                  onClick={() => {
+                    const id = selectedProduct.id
+                    setSelectedProduct(null)
+                    navigateTo('product', id)
+                  }}
+                >
+                  Full Page & Zoom
+                  <i className="bi bi-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
