@@ -1,0 +1,1216 @@
+/* =========================================================
+   ALBERTO CLOCKS - PRESTIGIOUS SWISS ATELIER LIGHT THEME
+   Palette: Luminous Pearl Platinum Base (#f6f8fb)
+   Typography: Executive Horology Navy (#0a1628 & #243a56)
+   Accents: Warm Swiss Champagne Gold (#c59b27, #b8860b, #dfb743)
+   Borders: Subtle Fine Gold & Azure (#cbdcf0, rgba(197, 163, 80, 0.25))
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   GLOBAL FOUNDATION
+   --------------------------------------------------------- */
+html[data-theme="light"],
+body.light-theme,
+[data-theme="light"] {
+  background-color: #f6f8fb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] body {
+  background: #f6f8fb !important;
+}
+
+/* Base Headings & High-Contrast Typography */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #0a1628 !important;
+  font-weight: 800;
+}
+
+[data-theme="light"] p {
+  color: #243a56 !important;
+  line-height: 1.6;
+}
+
+[data-theme="light"] a {
+  color: #1e3650;
+  transition: color 0.2s ease;
+}
+
+[data-theme="light"] a:hover {
+  color: #c59b27;
+}
+
+/* =========================================================
+   1. NAVBAR (Ultra-Crisp Frosted Satin Atelier Glass)
+   ========================================================= */
+[data-theme="light"] .alberto-navbar {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: 1px solid rgba(197, 163, 80, 0.28) !important;
+  box-shadow: 0 4px 25px rgba(12, 25, 44, 0.06) !important;
+}
+
+[data-theme="light"] .alberto-navbar::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c59b27 35%,
+    #2563eb 65%,
+    transparent
+  ) !important;
+  opacity: 0.75 !important;
+}
+
+[data-theme="light"] .alberto-logo {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .alberto-logo > span {
+  color: #0a1628 !important;
+  letter-spacing: 2px !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .alberto-logo small {
+  color: #b8860b !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+}
+
+[data-theme="light"] .navbar-links a {
+  color: #1e3650 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+}
+
+[data-theme="light"] .navbar-links a:hover,
+[data-theme="light"] .navbar-links a.active {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .navbar-links a.active::after {
+  background: #c59b27 !important;
+  height: 2px !important;
+}
+
+[data-theme="light"] .navbar-user-btn,
+[data-theme="light"] .navbar-cart-btn,
+[data-theme="light"] .navbar-settings-btn {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(197, 163, 80, 0.32) !important;
+  color: #0a1628 !important;
+  box-shadow: 0 2px 10px rgba(12, 25, 44, 0.05) !important;
+}
+
+[data-theme="light"] .navbar-user-btn:hover,
+[data-theme="light"] .navbar-cart-btn:hover,
+[data-theme="light"] .navbar-settings-btn:hover {
+  background: #fdfaf2 !important;
+  border-color: #c59b27 !important;
+  color: #c59b27 !important;
+  box-shadow: 0 4px 16px rgba(197, 163, 80, 0.22) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme="light"] .cart-count-badge {
+  background: linear-gradient(135deg, #c59b27, #9e7511) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 2px 6px rgba(197, 163, 80, 0.4) !important;
+}
+
+[data-theme="light"] .navbar-user-logged-btn {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(197, 163, 80, 0.35) !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .user-dropdown-menu {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.3) !important;
+  box-shadow: 0 16px 45px rgba(12, 25, 44, 0.12) !important;
+}
+
+[data-theme="light"] .dropdown-user-header {
+  border-bottom: 1px solid #eef2f8 !important;
+}
+
+[data-theme="light"] .dropdown-user-header strong {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .dropdown-item {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .dropdown-item:hover {
+  background: #fdfaf2 !important;
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .dropdown-item i {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .dropdown-divider {
+  background: #eef2f8 !important;
+}
+
+/* =========================================================
+   2. HOME PAGE HERO & SECTIONS
+   ========================================================= */
+[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #fefdfa 0%, #f4f7fc 55%, #edf2f9 100%) !important;
+}
+
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(254, 253, 250, 0.95) 0%,
+    rgba(244, 247, 252, 0.82) 48%,
+    rgba(237, 242, 249, 0.45) 100%
+  ) !important;
+}
+
+[data-theme="light"] .hero-brand {
+  background: linear-gradient(100deg, #0a1628 0%, #243a56 45%, #c59b27 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  opacity: 1 !important;
+}
+
+[data-theme="light"] .hero-content h1 {
+  background: linear-gradient(105deg, #0a1628 0%, #1e3650 50%, #c59b27 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  opacity: 1 !important;
+}
+
+[data-theme="light"] .hero-description {
+  color: #243a56 !important;
+  font-weight: 500 !important;
+}
+
+/* All Home Sections */
+[data-theme="light"] .products-section,
+[data-theme="light"] .packages-section,
+[data-theme="light"] .watchparts-section,
+[data-theme="light"] .technology-section,
+[data-theme="light"] .gallery-section,
+[data-theme="light"] .about-section,
+[data-theme="light"] .storelocator-section,
+[data-theme="light"] .support-section,
+[data-theme="light"] .contact-section {
+  background: #f6f8fb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .products-subtitle,
+[data-theme="light"] .packages-header > p:first-child,
+[data-theme="light"] .watchparts-tag,
+[data-theme="light"] .technology-tag,
+[data-theme="light"] .gallery-tag,
+[data-theme="light"] .about-tag,
+[data-theme="light"] .toolbar-label {
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+}
+
+[data-theme="light"] .products-header h2,
+[data-theme="light"] .packages-header h2,
+[data-theme="light"] .watchparts-header h2,
+[data-theme="light"] .technology-header h2,
+[data-theme="light"] .gallery-header h2,
+[data-theme="light"] .about-header h2,
+[data-theme="light"] .storelocator-header h2,
+[data-theme="light"] .support-header h2,
+[data-theme="light"] .contact-header h2 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .products-header h2 span,
+[data-theme="light"] .packages-header h2 span,
+[data-theme="light"] .watchparts-header h2 span {
+  background: linear-gradient(90deg, #0a1628 0%, #243a56 50%, #c59b27 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+[data-theme="light"] .products-intro,
+[data-theme="light"] .packages-intro,
+[data-theme="light"] .watchparts-intro,
+[data-theme="light"] .technology-intro,
+[data-theme="light"] .about-intro {
+  color: #243a56 !important;
+}
+
+/* Home Cards */
+[data-theme="light"] .product-card,
+[data-theme="light"] .category-card,
+[data-theme="light"] .package-card,
+[data-theme="light"] .tech-card,
+[data-theme="light"] .part-card,
+[data-theme="light"] .store-card,
+[data-theme="light"] .support-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.22) !important;
+  box-shadow: 0 10px 28px -4px rgba(12, 25, 44, 0.05), 0 2px 6px rgba(12, 25, 44, 0.03) !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .product-card:hover,
+[data-theme="light"] .category-card:hover,
+[data-theme="light"] .package-card:hover,
+[data-theme="light"] .tech-card:hover {
+  border-color: #c59b27 !important;
+  box-shadow: 0 18px 42px -6px rgba(197, 163, 80, 0.2) !important;
+}
+
+[data-theme="light"] .product-name,
+[data-theme="light"] .product-title,
+[data-theme="light"] .category-card h3,
+[data-theme="light"] .package-title,
+[data-theme="light"] .tech-title,
+[data-theme="light"] .part-title {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .product-price,
+[data-theme="light"] .package-price {
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .product-desc,
+[data-theme="light"] .product-description,
+[data-theme="light"] .package-feature,
+[data-theme="light"] .tech-description {
+  color: #486282 !important;
+}
+
+/* =========================================================
+   3. CONCIERGE CHECKOUT PAGE (Bespoke Horology Presentation)
+   ========================================================= */
+[data-theme="light"] .checkout-page {
+  background: #f6f8fb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .checkout-header-bar {
+  background: linear-gradient(180deg, #fefdfa 0%, #f4f7fc 100%) !important;
+  border-bottom: 1px solid rgba(197, 163, 80, 0.25) !important;
+}
+
+[data-theme="light"] .checkout-breadcrumbs button,
+[data-theme="light"] .checkout-breadcrumbs span {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .checkout-breadcrumbs button:hover {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .checkout-breadcrumbs .current {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .checkout-banner-title h1 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .checkout-banner-title h1 span {
+  background: linear-gradient(135deg, #c59b27 0%, #dfb743 60%, #9e7511 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+[data-theme="light"] .checkout-banner-title p {
+  color: #486282 !important;
+}
+
+/* Section Cards */
+[data-theme="light"] .checkout-section-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(12, 25, 44, 0.05) !important;
+  border-radius: 14px !important;
+}
+
+[data-theme="light"] .section-card-title {
+  border-bottom: 1px solid #eef2f8 !important;
+}
+
+[data-theme="light"] .section-card-title h3 {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .step-num {
+  background: linear-gradient(135deg, #c59b27, #dfb743) !important;
+  color: #0a1628 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 2px 8px rgba(197, 163, 80, 0.3) !important;
+}
+
+/* Auth Prompt */
+[data-theme="light"] .checkout-auth-prompt {
+  background: #fdfaf2 !important;
+  border: 1px solid rgba(197, 163, 80, 0.35) !important;
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .prompt-text i {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .btn-prompt-login {
+  background: #ffffff !important;
+  border: 1.5px solid #c59b27 !important;
+  color: #855f08 !important;
+}
+
+[data-theme="light"] .btn-prompt-login:hover {
+  background: #c59b27 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .checkout-auth-welcome {
+  background: rgba(5, 150, 105, 0.08) !important;
+  border: 1px solid rgba(5, 150, 105, 0.3) !important;
+  color: #059669 !important;
+}
+
+[data-theme="light"] .checkout-auth-welcome strong {
+  color: #0a1628 !important;
+}
+
+/* Fields */
+[data-theme="light"] .input-group label {
+  color: #0a1628 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .input-group input,
+[data-theme="light"] .input-group select,
+[data-theme="light"] .gift-textarea-wrap textarea {
+  background: #f9fbfe !important;
+  border: 1.5px solid #d0ddeb !important;
+  color: #0a1628 !important;
+  border-radius: 8px !important;
+}
+
+[data-theme="light"] .input-group input:focus,
+[data-theme="light"] .input-group select:focus,
+[data-theme="light"] .gift-textarea-wrap textarea:focus {
+  border-color: #c59b27 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(197, 163, 80, 0.15) !important;
+}
+
+[data-theme="light"] .card-chip-badge {
+  background: #eef2f8 !important;
+  color: #243a56 !important;
+  border: 1px solid #d0ddeb !important;
+}
+
+/* Shipping Options */
+[data-theme="light"] .shipping-option-card {
+  background: #f9fbfe !important;
+  border: 1px solid #dbe5f0 !important;
+}
+
+[data-theme="light"] .shipping-option-card:hover {
+  border-color: #c59b27 !important;
+}
+
+[data-theme="light"] .shipping-option-card.active {
+  background: #fdfaf2 !important;
+  border: 1.5px solid #c59b27 !important;
+  box-shadow: 0 4px 16px rgba(197, 163, 80, 0.12) !important;
+}
+
+[data-theme="light"] .shipping-opt-top strong {
+  color: #0a1628 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .price-free {
+  color: #059669 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .price-extra {
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .shipping-card-text p {
+  color: #486282 !important;
+}
+
+/* Payment Tabs */
+[data-theme="light"] .pay-tab {
+  background: #f1f5fa !important;
+  border: 1px solid #d5e2f0 !important;
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .pay-tab:hover {
+  border-color: #c59b27 !important;
+}
+
+[data-theme="light"] .pay-tab.active {
+  background: #ffffff !important;
+  border: 1.5px solid #c59b27 !important;
+  color: #855f08 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 14px rgba(197, 163, 80, 0.15) !important;
+}
+
+/* Wire details */
+[data-theme="light"] .wire-instructions-box {
+  background: #fbfaf6 !important;
+  border: 1px solid rgba(197, 163, 80, 0.35) !important;
+}
+
+[data-theme="light"] .wire-header i {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .wire-header h6 {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .wire-header p {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .wire-details-list {
+  background: #ffffff !important;
+  border: 1px solid #e8edf4 !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .wire-details-list span {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .wire-details-list strong {
+  color: #0a1628 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .wire-notice,
+[data-theme="light"] .crypto-text {
+  color: #486282 !important;
+}
+
+/* Gift Message */
+[data-theme="light"] .gift-check-custom {
+  border-color: #d0ddeb !important;
+  background: #f9fbfe !important;
+}
+
+[data-theme="light"] .gift-toggle-label input:checked + .gift-check-custom {
+  background: #c59b27 !important;
+  border-color: #c59b27 !important;
+}
+
+[data-theme="light"] .gift-toggle-label strong {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .gift-toggle-label span {
+  color: #486282 !important;
+}
+
+/* Authorize Order Button */
+[data-theme="light"] .btn-place-order {
+  background: linear-gradient(135deg, #c59b27 0%, #dfb743 50%, #b3881b 100%) !important;
+  color: #0a1628 !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 8px 25px rgba(197, 163, 80, 0.45) !important;
+}
+
+[data-theme="light"] .btn-place-order:hover:not(:disabled) {
+  box-shadow: 0 12px 35px rgba(197, 163, 80, 0.6) !important;
+}
+
+/* Sticky Summary Card */
+[data-theme="light"] .summary-sticky-card {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(197, 163, 80, 0.3) !important;
+  box-shadow: 0 16px 45px rgba(12, 25, 44, 0.08) !important;
+}
+
+[data-theme="light"] .summary-header {
+  border-bottom: 1px solid #eef2f8 !important;
+}
+
+[data-theme="light"] .summary-header h4 {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .summary-header span {
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .summary-item-card {
+  background: #f9fbfe !important;
+  border: 1px solid #e8edf4 !important;
+}
+
+[data-theme="light"] .summary-item-img-wrap {
+  background: #0a1120 !important;
+  border: 1px solid rgba(197, 163, 80, 0.25) !important;
+}
+
+[data-theme="light"] .summary-item-info h5 {
+  color: #0a1628 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .summary-cat {
+  color: #2563eb !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .summary-var-text {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .summary-item-price {
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .promo-input-group input {
+  background: #f9fbfe !important;
+  border: 1.5px solid #d0ddeb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .promo-input-group button {
+  background: #fdfaf2 !important;
+  border: 1.5px solid #c59b27 !important;
+  color: #855f08 !important;
+}
+
+[data-theme="light"] .summary-totals-breakdown {
+  border-top: 1px solid #eef2f8 !important;
+}
+
+[data-theme="light"] .summary-row {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .summary-row.grand-total {
+  border-top: 1.5px solid rgba(197, 163, 80, 0.25) !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .summary-row.grand-total span:last-child {
+  color: #c59b27 !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="light"] .trust-badge-item {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .trust-badge-item i {
+  color: #c59b27 !important;
+}
+
+/* Order Confirmed Screen */
+[data-theme="light"] .order-confirmed-container {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(197, 163, 80, 0.35) !important;
+  box-shadow: 0 25px 60px rgba(12, 25, 44, 0.08) !important;
+}
+
+[data-theme="light"] .confirmed-icon-circle {
+  border-color: #059669 !important;
+  color: #059669 !important;
+  background: rgba(5, 150, 105, 0.08) !important;
+}
+
+[data-theme="light"] .order-confirmed-tag {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .order-confirmed-container h1 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .order-lead-text {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .confirmed-dossier-card {
+  background: #f9fbfe !important;
+  border: 1px solid #d5e2f0 !important;
+}
+
+[data-theme="light"] .dossier-header {
+  border-bottom: 1px solid #e2ecf7 !important;
+}
+
+[data-theme="light"] .dossier-header h5 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .dossier-header span {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .dossier-item {
+  background: #ffffff !important;
+  border: 1px solid #e8edf4 !important;
+}
+
+[data-theme="light"] .dossier-item-info h6 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .dossier-item-info p {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .dossier-price {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .dossier-line {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .dossier-line.total {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .btn-confirmed-account {
+  background: #ffffff !important;
+  border: 1.5px solid #c59b27 !important;
+  color: #855f08 !important;
+}
+
+[data-theme="light"] .btn-confirmed-shop {
+  background: linear-gradient(135deg, #c59b27, #9e7511) !important;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   4. SHOP PAGE & PRODUCT CARDS
+   ========================================================= */
+[data-theme="light"] .shop-page {
+  background: #f6f8fb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .shop-hero {
+  background: linear-gradient(180deg, #fefdfa 0%, #f4f7fc 100%) !important;
+  border-bottom: 1px solid rgba(197, 163, 80, 0.22) !important;
+}
+
+[data-theme="light"] .shop-hero h1 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .shop-hero h1 span {
+  background: linear-gradient(135deg, #c59b27 0%, #dfb743 60%, #9e7511 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+[data-theme="light"] .shop-hero-lead {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .stat-pill {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.25) !important;
+  color: #0a1628 !important;
+  box-shadow: 0 2px 8px rgba(12, 25, 44, 0.04) !important;
+}
+
+[data-theme="light"] .stat-pill i {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .shop-sidebar {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.25) !important;
+  box-shadow: 0 8px 25px rgba(12, 25, 44, 0.05) !important;
+}
+
+[data-theme="light"] .sidebar-header h3 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .sidebar-search-box {
+  background: #f9fbfe !important;
+  border: 1.5px solid #d0ddeb !important;
+}
+
+[data-theme="light"] .sidebar-search-box input {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .sidebar-search-box input::placeholder {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .sidebar-search-box i {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .filter-title {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .category-btn {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .category-btn:hover,
+[data-theme="light"] .category-btn.active {
+  background: #fdfaf2 !important;
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .cat-count {
+  background: #eef2f8 !important;
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .price-input-box {
+  background: #f9fbfe !important;
+  border: 1.5px solid #d0ddeb !important;
+}
+
+[data-theme="light"] .price-input-box span {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .price-input-box input {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .color-btn-pill {
+  background: #f9fbfe !important;
+  border: 1px solid #d0ddeb !important;
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .color-btn-pill:hover,
+[data-theme="light"] .color-btn-pill.active {
+  background: #fdfaf2 !important;
+  border-color: #c59b27 !important;
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .radio-label,
+[data-theme="light"] .checkbox-label {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .radio-custom,
+[data-theme="light"] .checkbox-custom {
+  border-color: #d0ddeb !important;
+  background: #f9fbfe !important;
+}
+
+[data-theme="light"] .radio-label input:checked + .radio-custom {
+  border-color: #c59b27 !important;
+}
+
+[data-theme="light"] .radio-label input:checked + .radio-custom::after {
+  background: #c59b27 !important;
+}
+
+[data-theme="light"] .checkbox-label input:checked + .checkbox-custom {
+  background: #c59b27 !important;
+  border-color: #c59b27 !important;
+}
+
+/* Shop Toolbar */
+[data-theme="light"] .shop-toolbar {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.22) !important;
+  box-shadow: 0 4px 18px rgba(12, 25, 44, 0.04) !important;
+}
+
+[data-theme="light"] .results-count {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .results-count strong {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .sort-dropdown-wrap {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .sort-dropdown-wrap select {
+  background: #f9fbfe !important;
+  border: 1.5px solid #d0ddeb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .view-btn {
+  background: #f9fbfe !important;
+  border: 1px solid #d0ddeb !important;
+  color: #486282 !important;
+}
+
+[data-theme="light"] .view-btn:hover,
+[data-theme="light"] .view-btn.active {
+  background: #fdfaf2 !important;
+  border-color: #c59b27 !important;
+  color: #c59b27 !important;
+}
+
+/* Product Cards */
+[data-theme="light"] .shop-product-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.24) !important;
+  box-shadow: 0 8px 24px -4px rgba(12, 25, 44, 0.06), 0 2px 6px rgba(12, 25, 44, 0.03) !important;
+}
+
+[data-theme="light"] .shop-product-card:hover {
+  border-color: #c59b27 !important;
+  box-shadow: 0 18px 42px -6px rgba(197, 163, 80, 0.2) !important;
+}
+
+[data-theme="light"] .card-image-wrap {
+  background: #0a1120 !important;
+  border-bottom: 1px solid rgba(197, 163, 80, 0.2) !important;
+  padding: 0 !important;
+}
+
+[data-theme="light"] .category-pill {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(197, 163, 80, 0.3) !important;
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .limited-pill {
+  background: #fdfaf2 !important;
+  border: 1px solid #c59b27 !important;
+  color: #855f08 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .card-details {
+  background: #ffffff !important;
+}
+
+[data-theme="light"] .card-title {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .card-title:hover {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .card-desc {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .card-specs-row {
+  color: #486282 !important;
+}
+
+[data-theme="light"] .card-price {
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .card-add-cart-btn {
+  background: #f4f7fb !important;
+  border: 1px solid #d0ddeb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .card-add-cart-btn:hover {
+  background: #c59b27 !important;
+  color: #ffffff !important;
+  border-color: #c59b27 !important;
+}
+
+[data-theme="light"] .card-details-btn {
+  background: #fdfaf2 !important;
+  border: 1.5px solid #c59b27 !important;
+  color: #855f08 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .card-details-btn:hover {
+  background: linear-gradient(135deg, #c59b27, #9e7511) !important;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   5. CART DRAWER & MODALS
+   ========================================================= */
+[data-theme="light"] .cart-drawer {
+  background: #f6f8fb !important;
+  border-left: 1px solid rgba(197, 163, 80, 0.28) !important;
+  box-shadow: -15px 0 45px rgba(12, 25, 44, 0.12) !important;
+}
+
+[data-theme="light"] .cart-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(197, 163, 80, 0.25) !important;
+}
+
+[data-theme="light"] .cart-header-title h3 {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .cart-header-title i {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .cart-close-btn {
+  background: #f4f7fb !important;
+  border: 1px solid #d0ddeb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .cart-close-btn:hover {
+  background: #fdfaf2 !important;
+  border-color: #c59b27 !important;
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .cart-shipping-bar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eef2f8 !important;
+}
+
+[data-theme="light"] .shipping-text {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .shipping-text strong {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .cart-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.22) !important;
+  box-shadow: 0 4px 14px rgba(12, 25, 44, 0.04) !important;
+}
+
+[data-theme="light"] .cart-item-image {
+  background: #0a1120 !important;
+  border: 1px solid rgba(197, 163, 80, 0.25) !important;
+  padding: 0 !important;
+}
+
+[data-theme="light"] .cart-item-category {
+  color: #2563eb !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .cart-item-name {
+  color: #0a1628 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .cart-item-name:hover {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .var-chip {
+  background: #f4f7fb !important;
+  border: 1px solid #d0ddeb !important;
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .cart-item-price {
+  color: #c59b27 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .quantity-controls {
+  background: #f4f7fb !important;
+  border: 1px solid #d0ddeb !important;
+}
+
+[data-theme="light"] .qty-btn {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .qty-btn:hover {
+  color: #c59b27 !important;
+  background: #fdfaf2 !important;
+}
+
+[data-theme="light"] .qty-val {
+  color: #0a1628 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .cart-footer {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(197, 163, 80, 0.25) !important;
+}
+
+[data-theme="light"] .summary-row {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .summary-row.total strong {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .summary-row.total .total-amount {
+  color: #c59b27 !important;
+  font-weight: 900 !important;
+}
+
+[data-theme="light"] .checkout-btn {
+  background: linear-gradient(135deg, #c59b27 0%, #dfb743 50%, #b3881b 100%) !important;
+  color: #0a1628 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 8px 24px rgba(197, 163, 80, 0.4) !important;
+}
+
+/* Settings Modal */
+[data-theme="light"] .settings-modal,
+[data-theme="light"] .qv-modal,
+[data-theme="light"] .auth-card {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(197, 163, 80, 0.3) !important;
+  box-shadow: 0 25px 65px rgba(12, 25, 44, 0.15) !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .settings-header,
+[data-theme="light"] .settings-footer {
+  background: #f9fbfe !important;
+  border-color: #eef2f8 !important;
+}
+
+[data-theme="light"] .settings-header h3,
+[data-theme="light"] .qv-title,
+[data-theme="light"] .auth-title {
+  color: #0a1628 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="light"] .theme-card,
+[data-theme="light"] .sound-chip-btn {
+  background: #f9fbfe !important;
+  border: 1.5px solid #d0ddeb !important;
+}
+
+[data-theme="light"] .theme-card.active,
+[data-theme="light"] .sound-chip-btn.active {
+  background: #fdfaf2 !important;
+  border-color: #c59b27 !important;
+  color: #855f08 !important;
+  box-shadow: 0 4px 14px rgba(197, 163, 80, 0.15) !important;
+}
+
+[data-theme="light"] .vol-chip.active {
+  background: #c59b27 !important;
+  color: #ffffff !important;
+  border-color: #c59b27 !important;
+}
+
+/* =========================================================
+   6. PRODUCT DETAIL, ACCOUNT, SELL WATCH & FOOTER
+   ========================================================= */
+[data-theme="light"] .product-detail-page,
+[data-theme="light"] .account-page,
+[data-theme="light"] .sell-watch-page {
+  background: #f6f8fb !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .detail-card,
+[data-theme="light"] .account-card,
+[data-theme="light"] .sell-form-card,
+[data-theme="light"] .order-card,
+[data-theme="light"] .profile-card,
+[data-theme="light"] .strap-option-card,
+[data-theme="light"] .case-size-pill,
+[data-theme="light"] .related-product-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.24) !important;
+  box-shadow: 0 6px 20px rgba(12, 25, 44, 0.05) !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .strap-option-card.active,
+[data-theme="light"] .case-size-pill.active {
+  background: #fdfaf2 !important;
+  border-color: #c59b27 !important;
+}
+
+[data-theme="light"] .tech-tabs-nav {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.25) !important;
+}
+
+[data-theme="light"] .tech-tab-btn {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .tech-tab-btn.active {
+  color: #c59b27 !important;
+  border-bottom: 2px solid #c59b27 !important;
+}
+
+[data-theme="light"] .tech-tab-content-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(197, 163, 80, 0.25) !important;
+}
+
+/* Footer */
+[data-theme="light"] .alberto-footer {
+  background: linear-gradient(180deg, #f4f7fc 0%, #e9eef7 100%) !important;
+  border-top: 1px solid rgba(197, 163, 80, 0.25) !important;
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .footer-brand-title,
+[data-theme="light"] .footer-heading {
+  color: #0a1628 !important;
+}
+
+[data-theme="light"] .footer-link {
+  color: #243a56 !important;
+}
+
+[data-theme="light"] .footer-link:hover {
+  color: #c59b27 !important;
+}
+
+[data-theme="light"] .footer-copyright {
+  color: #486282 !important;
+  border-top: 1px solid rgba(197, 163, 80, 0.2) !important;
+}

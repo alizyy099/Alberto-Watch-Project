@@ -3,13 +3,13 @@ import { AudioContext } from './AudioContextInstance'
 import { audioEngine } from './AudioEngine'
 
 export function AudioProvider({ children }) {
-  // Volume: 0.0 to 1.0 (default 35% - soft and elegant)
+  // Volume: 0.0 to 1.0 (default 100% full immersion)
   const [volume, setVolumeState] = useState(() => {
     try {
       const saved = localStorage.getItem('alberto_ambient_volume')
-      return saved !== null ? parseFloat(saved) : 0.35
+      return saved !== null ? parseFloat(saved) : 1.0
     } catch {
-      return 0.35
+      return 1.0
     }
   })
 
@@ -141,9 +141,9 @@ export function AudioProvider({ children }) {
     } catch {}
   }, [])
 
-  // Reset to Atelier Defaults (35% volume, unmuted, salon)
+  // Reset to Atelier Defaults (100% volume, unmuted, salon)
   const resetDefaults = useCallback(() => {
-    setVolume(0.35)
+    setVolume(1.0)
     setIsMutedState(false)
     audioEngine.setMuted(false)
     setSoundscape('salon')

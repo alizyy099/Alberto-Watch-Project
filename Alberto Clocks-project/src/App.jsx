@@ -2,6 +2,7 @@ import { ShopProvider } from './context/ShopContext'
 import { useShop } from './context/useShop'
 import { AuthProvider } from './context/AuthContext'
 import { AudioProvider } from './context/AudioContext'
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
 import Products from './components/products/Products'
@@ -86,13 +87,15 @@ function MainContent() {
 
 function App() {
   return (
-    <AuthProvider>
-      <AudioProvider>
-        <ShopProvider>
-          <MainContent />
-        </ShopProvider>
-      </AudioProvider>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <AudioProvider>
+          <ShopProvider>
+            <MainContent />
+          </ShopProvider>
+        </AudioProvider>
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 

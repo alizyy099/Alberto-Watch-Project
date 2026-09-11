@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useAuth } from '../../context/useAuth'
 import { useShop } from '../../context/useShop'
 import { useAudio } from '../../context/useAudio'
+import { useTheme } from '../../context/useTheme'
 import './AccountPage.css'
 
 export default function AccountPage() {
@@ -18,6 +19,8 @@ export default function AccountPage() {
     setSoundscape,
     resetDefaults
   } = useAudio()
+
+  const { theme, setTheme } = useTheme()
 
   const [activeTab, setActiveTab] = useState('orders') // 'orders' | 'profile' | 'submissions'
 
@@ -567,10 +570,9 @@ export default function AccountPage() {
                   <span>Presets:</span>
                   <div className="acc-preset-chips">
                     {[
-                      { label: 'Mute', val: 0 },
-                      { label: 'Soft 25%', val: 0.25 },
-                      { label: 'Ideal 40%', val: 0.40 },
-                      { label: 'Lounge 70%', val: 0.70 },
+                      { label: 'Mute (0%)', val: 0 },
+                      { label: 'Soft 35%', val: 0.35 },
+                      { label: 'Balanced 65%', val: 0.65 },
                       { label: 'Full 100%', val: 1.0 }
                     ].map((p) => (
                       <button
@@ -596,9 +598,56 @@ export default function AccountPage() {
                 </div>
               </div>
 
+              {/* Theme Mode Selector */}
+              <div className="acc-setting-card">
+                <h4>Atelier Visual Theme</h4>
+                <p>Switch between the signature Midnight Dark mode and Clean Porcelain Light mode</p>
+
+                <div className="theme-toggle-grid">
+                  <button
+                    type="button"
+                    className={`theme-option-card ${theme === 'dark' ? 'active' : ''}`}
+                    onClick={() => setTheme('dark')}
+                  >
+                    <div className="theme-card-icon dark-icon">
+                      <i className="bi bi-moon-stars-fill"></i>
+                    </div>
+                    <div className="theme-card-text">
+                      <div className="theme-card-title-row">
+                        <h6>Midnight Dark Mode</h6>
+                        <span className="default-pill">Default</span>
+                      </div>
+                      <p>Signature horology dark palette with ambient obsidian glow & gold accents.</p>
+                    </div>
+                    <div className="theme-radio-circle">
+                      {theme === 'dark' && <i className="bi bi-check-circle-fill"></i>}
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    className={`theme-option-card ${theme === 'light' ? 'active' : ''}`}
+                    onClick={() => setTheme('light')}
+                  >
+                    <div className="theme-card-icon light-icon">
+                      <i className="bi bi-sun-fill"></i>
+                    </div>
+                    <div className="theme-card-text">
+                      <div className="theme-card-title-row">
+                        <h6>Clean Porcelain Light Mode</h6>
+                      </div>
+                      <p>Pristine alabaster white luxury styling with crisp slate typography & warm gold.</p>
+                    </div>
+                    <div className="theme-radio-circle">
+                      {theme === 'light' && <i className="bi bi-check-circle-fill"></i>}
+                    </div>
+                  </button>
+                </div>
+              </div>
+
               {/* Soundscape Atmosphere */}
               <div className="acc-setting-card">
-                <h4>Atelier Atmosphere Selection</h4>
+                <h4>Atelier Atmosphere Selection (7 Soundscapes)</h4>
                 <p>Choose your musical tone while exploring timepieces</p>
 
                 <div className="acc-soundscapes-grid">
@@ -636,6 +685,54 @@ export default function AccountPage() {
                     </div>
                     <h6>Midnight Celesta</h6>
                     <p>Ethereal crystalline bell chimes echoing softly through quiet evening ateliers.</p>
+                  </div>
+
+                  <div
+                    className={`soundscape-card ${soundscape === 'royal' ? 'active' : ''}`}
+                    onClick={() => setSoundscape('royal')}
+                  >
+                    <div className="soundscape-top">
+                      <i className="bi bi-music-note-list"></i>
+                      {soundscape === 'royal' && <span className="active-badge">Active</span>}
+                    </div>
+                    <h6>Royal Horology Strings</h6>
+                    <p>Grand orchestral string harmonies in D Major with regal warmth and resonance.</p>
+                  </div>
+
+                  <div
+                    className={`soundscape-card ${soundscape === 'alpine' ? 'active' : ''}`}
+                    onClick={() => setSoundscape('alpine')}
+                  >
+                    <div className="soundscape-top">
+                      <i className="bi bi-wind"></i>
+                      {soundscape === 'alpine' && <span className="active-badge">Active</span>}
+                    </div>
+                    <h6>Alpine Atelier Breeze</h6>
+                    <p>Acoustic nylon harp harmonics and airy Swiss mountain woodwind textures.</p>
+                  </div>
+
+                  <div
+                    className={`soundscape-card ${soundscape === 'vallee' ? 'active' : ''}`}
+                    onClick={() => setSoundscape('vallee')}
+                  >
+                    <div className="soundscape-top">
+                      <i className="bi bi-sunset"></i>
+                      {soundscape === 'vallee' && <span className="active-badge">Active</span>}
+                    </div>
+                    <h6>Vallée de Joux Twilight</h6>
+                    <p>Deep warm analog synth pad with tranquil sunset filter modulation.</p>
+                  </div>
+
+                  <div
+                    className={`soundscape-card ${soundscape === 'chronos' ? 'active' : ''}`}
+                    onClick={() => setSoundscape('chronos')}
+                  >
+                    <div className="soundscape-top">
+                      <i className="bi bi-activity"></i>
+                      {soundscape === 'chronos' && <span className="active-badge">Active</span>}
+                    </div>
+                    <h6>Chronos Kinetic Pulse</h6>
+                    <p>Modern minimalist clockwork beats, hypnotic micro-clicks, and Rhodes harmony.</p>
                   </div>
                 </div>
               </div>
